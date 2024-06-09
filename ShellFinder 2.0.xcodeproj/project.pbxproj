@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		409112D52C1537A0009AA164 /* ShellFinder_2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */; };
+		409112D72C1537A0009AA164 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112D62C1537A0009AA164 /* ContentView.swift */; };
+		409112D92C1537A1009AA164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409112D82C1537A1009AA164 /* Assets.xcassets */; };
+		409112DC2C1537A1009AA164 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409112DB2C1537A1009AA164 /* Preview Assets.xcassets */; };
+		409112E62C1537A1009AA164 /* ShellFinder_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112E52C1537A1009AA164 /* ShellFinder_2_0Tests.swift */; };
+		409112F02C1537A2009AA164 /* ShellFinder_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */; };
+		409112F22C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		409112E22C1537A1009AA164 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 409112C92C1537A0009AA164 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 409112D02C1537A0009AA164;
+			remoteInfo = "ShellFinder 2.0";
+		};
+		409112EC2C1537A2009AA164 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 409112C92C1537A0009AA164 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 409112D02C1537A0009AA164;
+			remoteInfo = "ShellFinder 2.0";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		409112D12C1537A0009AA164 /* ShellFinder 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShellFinder 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0App.swift; sourceTree = "<group>"; };
+		409112D62C1537A0009AA164 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		409112D82C1537A1009AA164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		409112DB2C1537A1009AA164 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		409112E12C1537A1009AA164 /* ShellFinder 2.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShellFinder 2.0Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		409112E52C1537A1009AA164 /* ShellFinder_2_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0Tests.swift; sourceTree = "<group>"; };
+		409112EB2C1537A2009AA164 /* ShellFinder 2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShellFinder 2.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITests.swift; sourceTree = "<group>"; };
+		409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		409112CE2C1537A0009AA164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		409112DE2C1537A1009AA164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		409112E82C1537A2009AA164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		409112C82C1537A0009AA164 = {
+			isa = PBXGroup;
+			children = (
+				409112D32C1537A0009AA164 /* ShellFinder 2.0 */,
+				409112E42C1537A1009AA164 /* ShellFinder 2.0Tests */,
+				409112EE2C1537A2009AA164 /* ShellFinder 2.0UITests */,
+				409112D22C1537A0009AA164 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		409112D22C1537A0009AA164 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				409112D12C1537A0009AA164 /* ShellFinder 2.0.app */,
+				409112E12C1537A1009AA164 /* ShellFinder 2.0Tests.xctest */,
+				409112EB2C1537A2009AA164 /* ShellFinder 2.0UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		409112D32C1537A0009AA164 /* ShellFinder 2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */,
+				409112D62C1537A0009AA164 /* ContentView.swift */,
+				409112D82C1537A1009AA164 /* Assets.xcassets */,
+				409112DA2C1537A1009AA164 /* Preview Content */,
+			);
+			path = "ShellFinder 2.0";
+			sourceTree = "<group>";
+		};
+		409112DA2C1537A1009AA164 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				409112DB2C1537A1009AA164 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		409112E42C1537A1009AA164 /* ShellFinder 2.0Tests */ = {
+			isa = PBXGroup;
+			children = (
+				409112E52C1537A1009AA164 /* ShellFinder_2_0Tests.swift */,
+			);
+			path = "ShellFinder 2.0Tests";
+			sourceTree = "<group>";
+		};
+		409112EE2C1537A2009AA164 /* ShellFinder 2.0UITests */ = {
+			isa = PBXGroup;
+			children = (
+				409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */,
+				409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */,
+			);
+			path = "ShellFinder 2.0UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		409112D02C1537A0009AA164 /* ShellFinder 2.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 409112F52C1537A2009AA164 /* Build configuration list for PBXNativeTarget "ShellFinder 2.0" */;
+			buildPhases = (
+				409112CD2C1537A0009AA164 /* Sources */,
+				409112CE2C1537A0009AA164 /* Frameworks */,
+				409112CF2C1537A0009AA164 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ShellFinder 2.0";
+			productName = "ShellFinder 2.0";
+			productReference = 409112D12C1537A0009AA164 /* ShellFinder 2.0.app */;
+			productType = "com.apple.product-type.application";
+		};
+		409112E02C1537A1009AA164 /* ShellFinder 2.0Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 409112F82C1537A2009AA164 /* Build configuration list for PBXNativeTarget "ShellFinder 2.0Tests" */;
+			buildPhases = (
+				409112DD2C1537A1009AA164 /* Sources */,
+				409112DE2C1537A1009AA164 /* Frameworks */,
+				409112DF2C1537A1009AA164 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				409112E32C1537A1009AA164 /* PBXTargetDependency */,
+			);
+			name = "ShellFinder 2.0Tests";
+			productName = "ShellFinder 2.0Tests";
+			productReference = 409112E12C1537A1009AA164 /* ShellFinder 2.0Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		409112EA2C1537A2009AA164 /* ShellFinder 2.0UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 409112FB2C1537A2009AA164 /* Build configuration list for PBXNativeTarget "ShellFinder 2.0UITests" */;
+			buildPhases = (
+				409112E72C1537A2009AA164 /* Sources */,
+				409112E82C1537A2009AA164 /* Frameworks */,
+				409112E92C1537A2009AA164 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				409112ED2C1537A2009AA164 /* PBXTargetDependency */,
+			);
+			name = "ShellFinder 2.0UITests";
+			productName = "ShellFinder 2.0UITests";
+			productReference = 409112EB2C1537A2009AA164 /* ShellFinder 2.0UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		409112C92C1537A0009AA164 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					409112D02C1537A0009AA164 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					409112E02C1537A1009AA164 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 409112D02C1537A0009AA164;
+					};
+					409112EA2C1537A2009AA164 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 409112D02C1537A0009AA164;
+					};
+				};
+			};
+			buildConfigurationList = 409112CC2C1537A0009AA164 /* Build configuration list for PBXProject "ShellFinder 2.0" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 409112C82C1537A0009AA164;
+			productRefGroup = 409112D22C1537A0009AA164 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				409112D02C1537A0009AA164 /* ShellFinder 2.0 */,
+				409112E02C1537A1009AA164 /* ShellFinder 2.0Tests */,
+				409112EA2C1537A2009AA164 /* ShellFinder 2.0UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		409112CF2C1537A0009AA164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409112DC2C1537A1009AA164 /* Preview Assets.xcassets in Resources */,
+				409112D92C1537A1009AA164 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		409112DF2C1537A1009AA164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		409112E92C1537A2009AA164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		409112CD2C1537A0009AA164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409112D72C1537A0009AA164 /* ContentView.swift in Sources */,
+				409112D52C1537A0009AA164 /* ShellFinder_2_0App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		409112DD2C1537A1009AA164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409112E62C1537A1009AA164 /* ShellFinder_2_0Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		409112E72C1537A2009AA164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409112F02C1537A2009AA164 /* ShellFinder_2_0UITests.swift in Sources */,
+				409112F22C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		409112E32C1537A1009AA164 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 409112D02C1537A0009AA164 /* ShellFinder 2.0 */;
+			targetProxy = 409112E22C1537A1009AA164 /* PBXContainerItemProxy */;
+		};
+		409112ED2C1537A2009AA164 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 409112D02C1537A0009AA164 /* ShellFinder 2.0 */;
+			targetProxy = 409112EC2C1537A2009AA164 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		409112F32C1537A2009AA164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		409112F42C1537A2009AA164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		409112F62C1537A2009AA164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ShellFinder 2.0/Preview Content\"";
+				DEVELOPMENT_TEAM = 52532P8Z4C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "curiousinventors.ShellFinder-2-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		409112F72C1537A2009AA164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ShellFinder 2.0/Preview Content\"";
+				DEVELOPMENT_TEAM = 52532P8Z4C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "curiousinventors.ShellFinder-2-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		409112F92C1537A2009AA164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52532P8Z4C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "curiousinventors.ShellFinder-2-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShellFinder 2.0.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShellFinder 2.0";
+			};
+			name = Debug;
+		};
+		409112FA2C1537A2009AA164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52532P8Z4C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "curiousinventors.ShellFinder-2-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShellFinder 2.0.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShellFinder 2.0";
+			};
+			name = Release;
+		};
+		409112FC2C1537A2009AA164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52532P8Z4C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "curiousinventors.ShellFinder-2-0UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ShellFinder 2.0";
+			};
+			name = Debug;
+		};
+		409112FD2C1537A2009AA164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52532P8Z4C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "curiousinventors.ShellFinder-2-0UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ShellFinder 2.0";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		409112CC2C1537A0009AA164 /* Build configuration list for PBXProject "ShellFinder 2.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409112F32C1537A2009AA164 /* Debug */,
+				409112F42C1537A2009AA164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		409112F52C1537A2009AA164 /* Build configuration list for PBXNativeTarget "ShellFinder 2.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409112F62C1537A2009AA164 /* Debug */,
+				409112F72C1537A2009AA164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		409112F82C1537A2009AA164 /* Build configuration list for PBXNativeTarget "ShellFinder 2.0Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409112F92C1537A2009AA164 /* Debug */,
+				409112FA2C1537A2009AA164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		409112FB2C1537A2009AA164 /* Build configuration list for PBXNativeTarget "ShellFinder 2.0UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409112FC2C1537A2009AA164 /* Debug */,
+				409112FD2C1537A2009AA164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 409112C92C1537A0009AA164 /* Project object */;
+}
