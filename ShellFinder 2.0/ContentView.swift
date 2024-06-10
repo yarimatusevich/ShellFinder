@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  ShellFinder 2.0
-//
-//  Created by Yaroslav Matusevich on 6/8/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
