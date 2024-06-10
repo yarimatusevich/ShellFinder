@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		406645AE2C1698D60098AE49 /* Shellfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645AD2C1698D60098AE49 /* Shellfish.swift */; };
+		406645B02C169D870098AE49 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645AF2C169D870098AE49 /* Camera.swift */; };
+		406645B22C16A0F50098AE49 /* ShellDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645B12C16A0F50098AE49 /* ShellDatabase.swift */; };
 		409112D52C1537A0009AA164 /* ShellFinder_2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */; };
 		409112D72C1537A0009AA164 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112D62C1537A0009AA164 /* ContentView.swift */; };
 		409112D92C1537A1009AA164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409112D82C1537A1009AA164 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		406645AD2C1698D60098AE49 /* Shellfish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shellfish.swift; sourceTree = "<group>"; };
+		406645AF2C169D870098AE49 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		406645B12C16A0F50098AE49 /* ShellDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellDatabase.swift; sourceTree = "<group>"; };
 		409112D12C1537A0009AA164 /* ShellFinder 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShellFinder 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0App.swift; sourceTree = "<group>"; };
 		409112D62C1537A0009AA164 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,7 +102,9 @@
 			children = (
 				409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */,
 				409112D62C1537A0009AA164 /* ContentView.swift */,
+				406645AF2C169D870098AE49 /* Camera.swift */,
 				406645AD2C1698D60098AE49 /* Shellfish.swift */,
+				406645B12C16A0F50098AE49 /* ShellDatabase.swift */,
 				409112D82C1537A1009AA164 /* Assets.xcassets */,
 				409112DA2C1537A1009AA164 /* Preview Content */,
 			);
@@ -260,6 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				406645B02C169D870098AE49 /* Camera.swift in Sources */,
+				406645B22C16A0F50098AE49 /* ShellDatabase.swift in Sources */,
 				409112D72C1537A0009AA164 /* ContentView.swift in Sources */,
 				409112D52C1537A0009AA164 /* ShellFinder_2_0App.swift in Sources */,
 				406645AE2C1698D60098AE49 /* Shellfish.swift in Sources */,
