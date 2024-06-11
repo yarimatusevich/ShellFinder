@@ -9,9 +9,7 @@ struct ContentView: View {
         ZStack {
             TabView(selection: $selectedTab) {
                 
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
+                MyShells()
                     .tabItem {
                         Image(systemName: "fossil.shell")
                         Text("My Shells")
@@ -20,10 +18,24 @@ struct ContentView: View {
                 
                 Text("hello vro..")
                     .tabItem {
+                        Image(systemName: "star.fill")
+                        Text("Favorites")
+                    }
+                    .tag(1)
+                
+                Discover()
+                    .tabItem {
+                        Image(systemName: "book.fill")
+                        Text("Discover")
+                    }
+                    .tag(2)
+                
+                ProfilePage()
+                    .tabItem {
                         Image(systemName: "person.fill")
                         Text("Profile")
                     }
-                    .tag(1)
+                    .tag(3)
 
             }
             
@@ -39,7 +51,7 @@ struct ContentView: View {
                                 .background(Circle().fill(Color.blue).frame(width: 70, height: 70))
                                 .shadow(radius: 5)
                     }
-                    .offset(y: 325)
+                    .offset(y: 305)
             
         }
     }
