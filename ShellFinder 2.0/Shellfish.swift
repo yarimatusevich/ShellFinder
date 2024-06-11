@@ -3,16 +3,18 @@ import Foundation
 class Shellfish {
     private let name: String
     private let scientificName: String
-    private let image: String // name of image file which will be displayed
-    private let location: String
-    private let size: Double
+//    private let image: String // name of image file which will be displayed
+    private let diet: String
+    private let habitat: String
+    private let size: String // size range in inches
+    private let isEndangered: Bool // conservation status
     
-    // class constructor called initializer in swift for some reason (crazy bastards)
-    init(name: String, scientificName: String, image: String, location: String, size: Double) {
+    init(name: String, scientificName: String, diet: String, habitat: String, size: String, isEndangered: Bool) {
         self.name = name
         self.scientificName = scientificName
-        self.image = image
-        self.location = location
+        self.diet = diet
+        self.habitat = habitat
         self.size = size
+        self.isEndangered = isEndangered
     }
 }
