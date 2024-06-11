@@ -3,9 +3,6 @@ import Foundation
 class ShellDatabase {
     
     var shellMap = [String : Shellfish]()
-    // Dictionary mapping string (name of shellfish) to shellfish object
-    // This is how we will get shell information.
-    // AI spits out a name, we put the name into the dictionary and get shellfish information which is displayed
     
     init() {
         // Atlantic Razor Clam
@@ -89,9 +86,12 @@ class ShellDatabase {
         
     }
     
-    // function for getting info about shell from name
-    // **** not working yet
-//    func getShell(shellName: String) -> Shellfish {
-//        
-//    }
+    func getShellInfo(shellName: String) -> Shellfish {
+        let defaultShell = Shellfish(name: "nil", scientificName: "nil", diet: "nil", habitat: "nil", averageSize: 0, averageLifeSpan: 0)
+        
+        // Checks if shell exists in database, else returns default
+        guard let output = shellMap[shellName] else { return defaultShell }
+        
+        return output
+    }
 }

@@ -16,7 +16,7 @@ struct ContentView: View {
                     }
                     .tag(0)
                 
-                Text("hello vro..")
+                Favorites()
                     .tabItem {
                         Image(systemName: "star.fill")
                         Text("Favorites")
