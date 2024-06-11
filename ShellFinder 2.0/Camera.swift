@@ -1,10 +1,12 @@
-//
-//  Camera.swift
-//  ShellFinder 2.0
-//
-//  Created by Yaroslav Matusevich on 6/9/24.
-//
+// Required functions
+// Capture session
+// Photo output
+// View Preview
+// Shutter button
 
-import Foundation
+import AVFoundation
+import UIKit
 
-// all code regarding camera will be here and instance will be created upon launch of app
+class Camera: UIViewController {
+    
+}

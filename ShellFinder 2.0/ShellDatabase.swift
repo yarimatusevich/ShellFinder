@@ -87,7 +87,7 @@ class ShellDatabase {
     }
     
     func getShellInfo(shellName: String) -> Shellfish {
-        let defaultShell = Shellfish(name: "nil", scientificName: "nil", diet: "nil", habitat: "nil", averageSize: 0, averageLifeSpan: 0)
+        let defaultShell = Shellfish(name: "null", scientificName: "null", diet: "null", habitat: "null", averageSize: 0, averageLifeSpan: 0)
         
         // Checks if shell exists in database, else returns default
         guard let output = shellMap[shellName] else { return defaultShell }
