@@ -1,8 +1,10 @@
 import Foundation
 
-class ShellDatabase {
+struct ShellDatabase {
     
-    static var shellMap: [String: Shellfish] = {
+    static var shellMap = [String: Shellfish]();
+    
+    static func populateMap() {
         // Atlantic Razor Clam
         shellMap["Atlantic Razor Clam"] = Shellfish(
             name: "Atlantic Razor Clam", scientificName: "Ensis leei",
@@ -113,9 +115,7 @@ class ShellDatabase {
             name: "Soft Shell Clam", scientificName: "Mya arenaria",
             diet: "Microorganisms", habitat: "Sandy or muddy bottoms in intertidal zones",
             averageSize: 3, averageLifeSpan: 15, image: "soft_shell.jpg")
-        
-        return shellMap
-    }()
+    }
     
     static func getKeys() -> Array<String> {
         return Array(shellMap.keys) // returns an array of all shell names (keys) in shellMap

@@ -1,7 +1,7 @@
 import Foundation
 
 class Shellfish: Identifiable {
-    private let name: String
+    let name: String
     private let scientificName: String
     private let diet: String
     private let habitat: String
