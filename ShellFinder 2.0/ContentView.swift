@@ -1,17 +1,13 @@
 import SwiftUI
 import UIKit
+
 struct ContentView: View {
-    
     @State var selectedTab = 1
     @State private var isShowingImagePicker = false
     
     var body: some View {
-        
         ZStack {
-            
-            
             TabView(selection: $selectedTab) {
-                
                 MyShells()
                     .tabItem {
                         Image(systemName: "fossil.shell")
@@ -46,11 +42,11 @@ struct ContentView: View {
                         Text("Profile")
                     }
                     .tag(4)
-                
             }
         }
     }
 }
+
 #Preview {
     ContentView()
 }

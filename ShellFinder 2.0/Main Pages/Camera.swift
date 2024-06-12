@@ -1,13 +1,8 @@
-//
-//  Camera.swift
-//  ShellFinder 2.0
-//
-//  Created by Yaroslav Matusevich on 6/9/24.
-//
 import Foundation
 import SwiftUI
 import UIKit
 import AVFoundation
+
 struct Camera: View {
     
     @StateObject var camera = CameraModel()
@@ -26,6 +21,7 @@ struct Camera: View {
             
     }
 }
+
 class CameraModel: ObservableObject {
     
     @Published var session = AVCaptureSession()
@@ -71,6 +67,7 @@ class CameraModel: ObservableObject {
             }
             self.session.commitConfiguration()
         }
+        
         catch{
             print(error.localizedDescription)
         }
@@ -82,7 +79,9 @@ class CameraModel: ObservableObject {
     
 }
 struct CameraPreview: UIViewRepresentable {
+    
     @ObservedObject var camera : CameraModel
+    
     func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: UIScreen.main.bounds)
         
@@ -99,10 +98,10 @@ struct CameraPreview: UIViewRepresentable {
         
         return view
     }
+    
     func updateUIView(_ uiView: UIView, context: Context) {
         DispatchQueue.main.async {
                     camera.preview?.frame = uiView.bounds
                 }
     }
 }
-// all code regarding camera will be here and instance will be created upon launch of app
