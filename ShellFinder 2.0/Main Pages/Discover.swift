@@ -10,18 +10,20 @@ struct Discover: View {
         ZStack {
             List(shellfish) { element in
                 Text(element.name)
-        TabView {
-            NavigationView {
-                ScrollView {
-                    Text("Hello World")
-                    Text("Hello World")
-                    Text("Hello World")
-                }
-                .navigationTitle("Discover")
             }
+//        TabView {
+//            NavigationView {
+//                ScrollView {
+//                    Text("Hello World")
+//                    Text("Hello World")
+//                    Text("Hello World")
+//                }
+//                .navigationTitle("Discover")
+//            }
         }
     }
 }
+    
 
 class DiscoverModel {
     
