@@ -16,8 +16,7 @@ struct Camera: View {
         ZStack {
             
             CameraPreview(camera: camera)
-                .ignoresSafeArea(.all, edges: .top)
-                .padding(.bottom, 5)
+                .ignoresSafeArea(.all, edges: .all)
                 .onAppear(perform: {
                     camera.Check()
                 })

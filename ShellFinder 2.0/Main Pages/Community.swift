@@ -8,14 +8,16 @@ import SwiftUI
 struct Community: View {
     var body: some View {
         
-        ZStack {
-            Color.blue
-                .ignoresSafeArea(.all, edges: .top)
-                .padding(.bottom, 5)
-            
-            Text("Communtiy tab!!!!!!!")
+        TabView {
+            NavigationView {
+                ScrollView {
+                    Text("Hello World")
+                    Text("Hello World")
+                    Text("Hello World")
+                }
+                .navigationTitle("Communtiy")
+            }
         }
-        
     }
 }
 #Preview {

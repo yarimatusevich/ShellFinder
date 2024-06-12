@@ -7,46 +7,49 @@ struct ContentView: View {
     
     var body: some View {
         
-        ZStack {
-            
-            
+        ZStack(alignment: .bottom) {
+                
             TabView(selection: $selectedTab) {
                 
-                MyShells()
-                    .tabItem {
-                        Image(systemName: "fossil.shell")
-                        Text("My Shells")
-                    }
-                    .tag(0)
-                
-                Community()
-                    .tabItem {
-                        Image(systemName: "person.3.fill")
-                        Text("Community")
-                    }
-                    .tag(1)
-                
-                Camera()
-                    .tabItem {
-                        Image(systemName: "camera.fill")
-                        Text("Identify")
-                    }
-                    .tag(2)
-                
-                Discover()
-                    .tabItem {
-                        Image(systemName: "book.fill")
-                        Text("Discover")
-                    }
-                    .tag(3)
-                
-                ProfilePage()
-                    .tabItem {
-                        Image(systemName: "person.fill")
-                        Text("Profile")
-                    }
-                    .tag(4)
-                
+                Group {
+                    
+                    MyShells()
+                        .tabItem {
+                            Image(systemName: "fossil.shell")
+                            Text("My Shells")
+                        }
+                        .tag(0)
+                    
+                    Community()
+                        .tabItem {
+                            Image(systemName: "person.3.fill")
+                            Text("Community")
+                        }
+                        .tag(1)
+                    
+                    Camera()
+                        .tabItem {
+                            Image(systemName: "camera.fill")
+                            Text("Identify")
+                        }
+                        .tag(2)
+                    
+                    Discover()
+                        .tabItem {
+                            Image(systemName: "book.fill")
+                            Text("Discover")
+                        }
+                        .tag(3)
+                    
+                    ProfilePage()
+                        .tabItem {
+                            Image(systemName: "person.fill")
+                            Text("Profile")
+                        }
+                        .tag(4)
+                }
+                .toolbarBackground(.white, for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
             }
         }
     }

@@ -8,12 +8,26 @@ import SwiftUI
 struct ProfilePage: View {
     var body: some View {
         
-        ZStack {
-            Color.green
-                .ignoresSafeArea(.all, edges: .top)
-                .padding(.bottom, 5)
-            
-            Text("PROFILEE")
+        TabView {
+            NavigationView {
+                ScrollView {
+                    Text("Hello World")
+                    Text("Hello World")
+                    Text("Hello World")
+                }
+                .navigationTitle("Profile")
+                .navigationBarItems(
+//                    leading: NavigationLink (
+//                        destination: Text("Destination"),
+//                          label: {
+//                              Text("Favorites")
+//                          }),
+                    trailing: NavigationLink (
+                        destination: Text("Destination"),
+                          label: {
+                              Image(systemName: "gearshape.fill")
+                          }))
+            }
         }
         
     }
