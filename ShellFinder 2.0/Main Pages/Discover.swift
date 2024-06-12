@@ -9,17 +9,9 @@ struct Discover: View {
         
         ZStack {
             List(shellfish) { element in
-                Text(element.name)
+                Text(element.getName())
+                Image(element.getImage())
             }
-//        TabView {
-//            NavigationView {
-//                ScrollView {
-//                    Text("Hello World")
-//                    Text("Hello World")
-//                    Text("Hello World")
-//                }
-//                .navigationTitle("Discover")
-//            }
         }
     }
 }

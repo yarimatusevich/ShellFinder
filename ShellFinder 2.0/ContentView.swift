@@ -13,7 +13,6 @@ struct ContentView: View {
             TabView(selection: $selectedTab) {
                 
                 Group {
-                    
                     MyShells()
                         .tabItem {
                             Image(systemName: "fossil.shell")

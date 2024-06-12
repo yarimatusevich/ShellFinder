@@ -1,7 +1,7 @@
 import Foundation
 
 class Shellfish: Identifiable {
-    let name: String
+    private let name: String
     private let scientificName: String
     private let diet: String
     private let habitat: String
@@ -17,5 +17,34 @@ class Shellfish: Identifiable {
         self.averageSize = averageSize
         self.averageLifeSpan = averageLifeSpan
         self.image = image
+    }
+    
+    // Getters
+    public func getName() -> String {
+        return name
+    }
+    
+    public func getScientificName() -> String {
+        return scientificName
+    }
+    
+    public func getDiet() -> String {
+        return diet
+    }
+    
+    public func getHabitat() -> String {
+        return habitat
+    }
+    
+    public func getAverageSize() -> Double {
+        return averageSize
+    }
+    
+    public func getAverageLifeSpan() -> Double {
+        return averageLifeSpan
+    }
+    
+    public func getImage() -> String {
+        return image
     }
 }
