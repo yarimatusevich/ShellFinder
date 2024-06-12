@@ -4,15 +4,19 @@
 //
 //  Created by Drew Visconti on 6/10/24.
 //
-
 import SwiftUI
-
 struct MyShells: View {
     var body: some View {
-        Text("HISTORRY")
+        
+        ZStack {
+            Color.red
+                .ignoresSafeArea(.all, edges: .top)
+                .padding(.bottom, 5)
+            
+            Text("HISTORRY")
+        }
     }
 }
-
 #Preview {
     MyShells()
 }

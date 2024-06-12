@@ -10,6 +10,7 @@
 		23406F1C2C17E70500763032 /* MyShells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23406F1B2C17E70500763032 /* MyShells.swift */; };
 		23406F1E2C17E7A900763032 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23406F1D2C17E7A900763032 /* Discover.swift */; };
 		23406F202C17E80C00763032 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23406F1F2C17E80C00763032 /* ProfilePage.swift */; };
+		23406F262C1978E600763032 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23406F252C1978E600763032 /* Community.swift */; };
 		406645AE2C1698D60098AE49 /* Shellfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645AD2C1698D60098AE49 /* Shellfish.swift */; };
 		406645B02C169D870098AE49 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645AF2C169D870098AE49 /* Camera.swift */; };
 		406645B22C16A0F50098AE49 /* ShellDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645B12C16A0F50098AE49 /* ShellDatabase.swift */; };
@@ -20,7 +21,6 @@
 		409112E62C1537A1009AA164 /* ShellFinder_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112E52C1537A1009AA164 /* ShellFinder_2_0Tests.swift */; };
 		409112F02C1537A2009AA164 /* ShellFinder_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */; };
 		409112F22C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */; };
-		40A47B022C18F6EF00C64D52 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A47B012C18F6EF00C64D52 /* Favorites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,7 @@
 		23406F1B2C17E70500763032 /* MyShells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShells.swift; sourceTree = "<group>"; };
 		23406F1D2C17E7A900763032 /* Discover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
 		23406F1F2C17E80C00763032 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		23406F252C1978E600763032 /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
 		406645AD2C1698D60098AE49 /* Shellfish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shellfish.swift; sourceTree = "<group>"; };
 		406645AF2C169D870098AE49 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		406645B12C16A0F50098AE49 /* ShellDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellDatabase.swift; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		409112EB2C1537A2009AA164 /* ShellFinder 2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShellFinder 2.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITests.swift; sourceTree = "<group>"; };
 		409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		40A47B012C18F6EF00C64D52 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +85,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23406F272C1978F500763032 /* Main Pages */ = {
+			isa = PBXGroup;
+			children = (
+				23406F1B2C17E70500763032 /* MyShells.swift */,
+				23406F252C1978E600763032 /* Community.swift */,
+				406645AF2C169D870098AE49 /* Camera.swift */,
+				23406F1D2C17E7A900763032 /* Discover.swift */,
+				23406F1F2C17E80C00763032 /* ProfilePage.swift */,
+			);
+			path = "Main Pages";
+			sourceTree = "<group>";
+		};
 		409112C82C1537A0009AA164 = {
 			isa = PBXGroup;
 			children = (
@@ -108,13 +120,9 @@
 		409112D32C1537A0009AA164 /* ShellFinder 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				23406F272C1978F500763032 /* Main Pages */,
 				409112D62C1537A0009AA164 /* ContentView.swift */,
-				23406F1F2C17E80C00763032 /* ProfilePage.swift */,
-				23406F1B2C17E70500763032 /* MyShells.swift */,
-				23406F1D2C17E7A900763032 /* Discover.swift */,
-				40A47B012C18F6EF00C64D52 /* Favorites.swift */,
 				409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */,
-				406645AF2C169D870098AE49 /* Camera.swift */,
 				406645AD2C1698D60098AE49 /* Shellfish.swift */,
 				406645B12C16A0F50098AE49 /* ShellDatabase.swift */,
 				409112D82C1537A1009AA164 /* Assets.xcassets */,
@@ -278,11 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40A47B022C18F6EF00C64D52 /* Favorites.swift in Sources */,
 				406645B02C169D870098AE49 /* Camera.swift in Sources */,
 				406645B22C16A0F50098AE49 /* ShellDatabase.swift in Sources */,
 				23406F202C17E80C00763032 /* ProfilePage.swift in Sources */,
 				23406F1C2C17E70500763032 /* MyShells.swift in Sources */,
+				23406F262C1978E600763032 /* Community.swift in Sources */,
 				409112D72C1537A0009AA164 /* ContentView.swift in Sources */,
 				409112D52C1537A0009AA164 /* ShellFinder_2_0App.swift in Sources */,
 				406645AE2C1698D60098AE49 /* Shellfish.swift in Sources */,
@@ -450,7 +458,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShellFinder 2.0/Preview Content\"";
-				DEVELOPMENT_TEAM = 52532P8Z4C;
+				DEVELOPMENT_TEAM = XKX94F4LDN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera permissions.";
@@ -464,7 +472,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "curiousinventors.ShellFinder-2-0";
+				PRODUCT_BUNDLE_IDENTIFIER = curiousinventors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -480,7 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShellFinder 2.0/Preview Content\"";
-				DEVELOPMENT_TEAM = 52532P8Z4C;
+				DEVELOPMENT_TEAM = XKX94F4LDN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera permissions.";
@@ -494,7 +502,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "curiousinventors.ShellFinder-2-0";
+				PRODUCT_BUNDLE_IDENTIFIER = curiousinventors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

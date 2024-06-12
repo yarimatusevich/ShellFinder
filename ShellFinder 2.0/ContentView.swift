@@ -1,12 +1,15 @@
 import SwiftUI
-
+import UIKit
 struct ContentView: View {
     
     @State var selectedTab = 1
+    @State private var isShowingImagePicker = false
     
     var body: some View {
         
         ZStack {
+            
+            
             TabView(selection: $selectedTab) {
                 
                 MyShells()
@@ -16,47 +19,38 @@ struct ContentView: View {
                     }
                     .tag(0)
                 
-                Favorites()
+                Community()
                     .tabItem {
-                        Image(systemName: "star.fill")
-                        Text("Favorites")
+                        Image(systemName: "person.3.fill")
+                        Text("Community")
                     }
                     .tag(1)
+                
+                Camera()
+                    .tabItem {
+                        Image(systemName: "camera.fill")
+                        Text("Identify")
+                    }
+                    .tag(2)
                 
                 Discover()
                     .tabItem {
                         Image(systemName: "book.fill")
                         Text("Discover")
                     }
-                    .tag(2)
+                    .tag(3)
                 
                 ProfilePage()
                     .tabItem {
                         Image(systemName: "person.fill")
                         Text("Profile")
                     }
-                    .tag(3)
-
+                    .tag(4)
+                
             }
-            
-            Button(action: {
-                        // Define button action here
-                    }) {
-                        Image(systemName: "camera")
-                            .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 25, height: 25)
-                                .foregroundColor(.white)
-                                .padding(20)
-                                .background(Circle().fill(Color.blue).frame(width: 70, height: 70))
-                                .shadow(radius: 5)
-                    }
-                    .offset(y: 305)
-            
         }
     }
 }
-
 #Preview {
     ContentView()
 }
