@@ -2,9 +2,7 @@ import Foundation
 
 class ShellDatabase {
     
-    var shellMap = [String : Shellfish]()
-    
-    init() {
+    static var shellMap: [String: Shellfish] = {
         // Atlantic Razor Clam
         shellMap["Atlantic Razor Clam"] = Shellfish(
             name: "Atlantic Razor Clam", scientificName: "Ensis leei",
@@ -116,13 +114,23 @@ class ShellDatabase {
             diet: "Microorganisms", habitat: "Sandy or muddy bottoms in intertidal zones",
             averageSize: 3, averageLifeSpan: 15, image: "soft_shell.jpg")
         
+        return shellMap
+    }()
+    
+    static func getKeys() -> Array<String> {
+        return Array(shellMap.keys) // returns an array of all shell names (keys) in shellMap
     }
     
-    func getShellInfo(shellName: String) -> Shellfish {
+    // Test function
+    static func printShells() {
+        print(shellMap)
+    }
+    
+    static func getShellInfo(shellName: String) -> Shellfish {
         let defaultShell = Shellfish(name: "null", scientificName: "null", diet: "null", habitat: "null", averageSize: 0, averageLifeSpan: 0, image: "null")
         
         // Checks if shell exists in database, else returns default
-        guard let output = shellMap[shellName] else { return defaultShell }
+        guard let output = ShellDatabase.shellMap[shellName] else { return defaultShell }
         
         return output
     }
