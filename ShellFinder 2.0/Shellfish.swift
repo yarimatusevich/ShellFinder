@@ -1,6 +1,6 @@
 import Foundation
 
-class Shellfish {
+class Shellfish: Identifiable {
     private let name: String
     private let scientificName: String
     private let diet: String

@@ -16,6 +16,7 @@ struct ContentView: View {
                         Text("My Shells")
                     }
                     .tag(0)
+                    .navigationTitle("My Shells")
                 
                 Community()
                     .tabItem {
@@ -23,6 +24,7 @@ struct ContentView: View {
                         Text("Community")
                     }
                     .tag(1)
+                    .navigationTitle("Community")
                 
                 Camera()
                     .tabItem {
@@ -37,6 +39,7 @@ struct ContentView: View {
                         Text("Discover")
                     }
                     .tag(3)
+                    .navigationTitle("Discover")
                 
                 ProfilePage()
                     .tabItem {
@@ -44,6 +47,7 @@ struct ContentView: View {
                         Text("Profile")
                     }
                     .tag(4)
+                    .navigationTitle("Profile")
             }
         }
     }
