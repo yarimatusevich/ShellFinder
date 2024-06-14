@@ -7,18 +7,23 @@ struct Discover: View {
         let discoverModel = DiscoverModel()
         let shells = discoverModel.getShells()
         
-        ZStack {
+        NavigationView {
+            
             List(shells) { shell in
-                HStack {
-                    Image(shell.getImage())
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 55, height: 50, alignment: .center)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                    
-                    Text(shell.getName())
+                NavigationLink(destination: ShellDetails()) {
+                    HStack {
+                        Image(shell.getImage())
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 55, height: 50, alignment: .center)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .padding(10)
+                        
+                        Text(shell.getName())
+                    }
                 }
             }
+            
         }
     }
 }
@@ -31,8 +36,12 @@ class DiscoverModel {
     }
     
     func getShells() -> Array<Shellfish> {
-        let keys = ShellDatabase.getKeys()
+        var keys = ShellDatabase.getKeys()
+        
         var shellfishArray = [Shellfish]() // empty array
+        
+        // Sorts keys in alphabetic order
+        keys.sort()
         
         // goes through all keys adding each species of shellfish in database to array
         for key in keys {
