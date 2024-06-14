@@ -4,13 +4,12 @@ struct Discover: View {
     
     var body: some View {
         
-        let discoverModel = DiscoverModel()
-        let shells = discoverModel.getShells()
+        let shells = ShellDatabase.getShells() // Array of all shells
         
         NavigationView {
             
             List(shells) { shell in
-                NavigationLink(destination: ShellDetails()) {
+                NavigationLink(destination: ShellDetails(currentShell: shell)) {
                     HStack {
                         Image(shell.getImage())
                             .resizable()
@@ -22,35 +21,9 @@ struct Discover: View {
                         Text(shell.getName())
                     }
                 }
+                .navigationTitle("Discover")
             }
-            
         }
-    }
-}
-    
-
-class DiscoverModel {
-    
-    init() {
-        ShellDatabase.populateMap()
-    }
-    
-    func getShells() -> Array<Shellfish> {
-        var keys = ShellDatabase.getKeys()
-        
-        var shellfishArray = [Shellfish]() // empty array
-        
-        // Sorts keys in alphabetic order
-        keys.sort()
-        
-        // goes through all keys adding each species of shellfish in database to array
-        for key in keys {
-            shellfishArray.append(
-                ShellDatabase.getShellInfo(shellName: key)
-            )
-        }
-        
-        return shellfishArray
     }
 }
 

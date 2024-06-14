@@ -121,6 +121,26 @@ struct ShellDatabase {
         return Array(shellMap.keys) // returns an array of all shell names (keys) in shellMap
     }
     
+    static func getShells() -> Array<Shellfish> {
+        populateMap() // Temporary
+        
+        var keys = ShellDatabase.getKeys()
+        
+        var shellfishArray = [Shellfish]() // empty array
+        
+        // Sorts keys in alphabetic order
+        keys.sort()
+        
+        // goes through all keys adding each species of shellfish in database to array
+        for key in keys {
+            shellfishArray.append(
+                ShellDatabase.getShellInfo(shellName: key)
+            )
+        }
+        
+        return shellfishArray
+    }
+    
     // Test function
     static func printShells() {
         print(shellMap)
