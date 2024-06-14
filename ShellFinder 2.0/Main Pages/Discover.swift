@@ -5,12 +5,19 @@ struct Discover: View {
     var body: some View {
         
         let discoverModel = DiscoverModel()
-        let shellfish = discoverModel.getShells()
+        let shells = discoverModel.getShells()
         
         ZStack {
-            List(shellfish) { element in
-                Text(element.getName())
-                Image(element.getImage())
+            List(shells) { shell in
+                HStack {
+                    Image(shell.getImage())
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 55, height: 50, alignment: .center)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    
+                    Text(shell.getName())
+                }
             }
         }
     }

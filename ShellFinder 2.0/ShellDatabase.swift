@@ -58,7 +58,7 @@ struct ShellDatabase {
         shellMap["False Angel Wing"] = Shellfish(
             name: "False Angel Wing", scientificName: "Petricolaria pholadiformis",
             diet: "Microrganisms", habitat: "Intertidal and shallow subtidal zones with sandy or muddy substrates",
-            averageSize: 3, averageLifeSpan: 1.5, image: "false_angel"
+            averageSize: 3, averageLifeSpan: 1.5, image: "false_angelwing"
         )
         
         // Jingle Shell

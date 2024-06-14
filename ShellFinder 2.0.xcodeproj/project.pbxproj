@@ -21,6 +21,7 @@
 		409112E62C1537A1009AA164 /* ShellFinder_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112E52C1537A1009AA164 /* ShellFinder_2_0Tests.swift */; };
 		409112F02C1537A2009AA164 /* ShellFinder_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */; };
 		409112F22C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */; };
+		40F00D3C2C1BE3D7009F77C6 /* ShellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D3B2C1BE3D7009F77C6 /* ShellDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		409112EB2C1537A2009AA164 /* ShellFinder 2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShellFinder 2.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITests.swift; sourceTree = "<group>"; };
 		409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		40F00D3B2C1BE3D7009F77C6 /* ShellDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				406645AF2C169D870098AE49 /* Camera.swift */,
 				23406F1D2C17E7A900763032 /* Discover.swift */,
 				23406F1F2C17E80C00763032 /* ProfilePage.swift */,
+				40F00D3B2C1BE3D7009F77C6 /* ShellDetails.swift */,
 			);
 			path = "Main Pages";
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				406645B02C169D870098AE49 /* Camera.swift in Sources */,
+				40F00D3C2C1BE3D7009F77C6 /* ShellDetails.swift in Sources */,
 				406645B22C16A0F50098AE49 /* ShellDatabase.swift in Sources */,
 				23406F202C17E80C00763032 /* ProfilePage.swift in Sources */,
 				23406F1C2C17E70500763032 /* MyShells.swift in Sources */,
