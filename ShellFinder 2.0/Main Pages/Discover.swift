@@ -17,10 +17,17 @@ struct Discover: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                                 .padding(.trailing, 5)
                             
-                            Text(shell.getName())
-                                .font(.system(size: 19))
-                                .lineSpacing(5)
-                            
+                            VStack(alignment: .leading) {
+                                
+                                Text(shell.getName())
+                                    .font(.system(size: 16))
+                                    .lineSpacing(5)
+                                    .padding(.bottom, 5)
+                                Text(shell.getScientificName())
+                                    .font(.system(size: 15))
+                                    .italic()
+                                    .lineSpacing(5)
+                            }
                         }
                 }
                 .navigationTitle("Discover")
