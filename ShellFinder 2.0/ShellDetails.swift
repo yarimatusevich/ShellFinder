@@ -14,46 +14,101 @@ struct ShellDetails: View {
                 .resizable()
                 .frame(width: 300, height: 295, alignment: .center)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                .padding()
             
             HStack {
                 VStack(alignment: .leading) {
                     HStack {
                         Image(systemName: "fork.knife")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 27, height: 27)
                             .padding(10)
-                        Text(currentShell.getDiet())
+                        VStack(alignment: .leading) {
+                            Text("Diet")
+                                .font(.system(size: 17))
+                            Spacer(minLength: 5)
+                            Text(currentShell.getDiet())
+                                .font(.system(size: 14))
+                        }
                     }
+                    
+                    .padding(.bottom)
                     
                     HStack {
                         Image(systemName: "atom")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 27, height: 27)
                             .padding(10)
-                        Text(currentShell.getScientificName())
+                        VStack(alignment: .leading) {
+                            Text("Scientific Name")
+                                .font(.system(size: 17))
+                            Spacer(minLength: 5)
+                            Text(currentShell.getScientificName())
+                                .font(.system(size: 14))
+                        }
                     }
+                    
+                    .padding(.bottom)
                     
                     HStack {
                         Image(systemName: "house.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 27, height: 27)
                             .padding(10)
-                        Text(currentShell.getHabitat())
+                        VStack(alignment: .leading) {
+                            Text("Habitat")
+                                .font(.system(size: 17))
+                            Spacer(minLength: 5)
+                            Text(currentShell.getHabitat())
+                                .font(.system(size: 14))
+                        }
                     }
+                    
+                    .padding(.bottom)
                     
                     HStack {
-                        Image(systemName: "house.fill")
+                        Image(systemName: "ruler.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 27, height: 27)
                             .padding(10)
-                        Text(String(format: "%.2f", currentShell.getAverageSize()))
+                        VStack(alignment: .leading) {
+                            Text("Average Size")
+                                .font(.system(size: 17))
+                            Spacer(minLength: 5)
+                            Text(String(format: "%.0f Years", currentShell.getAverageSize()))
+                                .font(.system(size: 14))
+                        }
                     }
+                    
+                    .padding(.bottom)
                     
                     HStack {
-                        Image(systemName: "house.fill")
+                        Image(systemName: "clock.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 27, height: 27)
                             .padding(10)
-                        Text(String(format: "%.2f", currentShell.getAverageLifeSpan()))
+                        VStack(alignment: .leading) {
+                            Text("Average Lifespan")
+                                .font(.system(size: 17))
+                            Spacer(minLength: 5)
+                            Text(String(format: "%.0f Years", currentShell.getAverageLifeSpan()))
+                                .font(.system(size: 14))
+                        }
                     }
-                    
-                    Spacer()
                 }
-                .padding()
+                //.padding()
             }
+            
+            
             
             Spacer() // Aligns all elements in VStack to top
         }
+        .scrollIndicators(.hidden)
     }
 }
 
