@@ -6,9 +6,11 @@ struct Community: View {
         TabView {
             NavigationView {
                 ScrollView {
-                    Text("Hello World")
-                    Text("Hello World")
-                    Text("Hello World")
+                    VStack {
+                        Text("Hello World")
+                        Text("Hello World")
+                        Text("Hello World")
+                    }
                 }
                 .navigationTitle("Communtiy")
             }
