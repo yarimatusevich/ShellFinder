@@ -20,22 +20,6 @@ struct ShellDetails: View {
             VStack(alignment: .leading) {
                 
                 HStack {
-                    Image(systemName: "fork.knife")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 27, height: 27)
-                        .padding(10)
-                    VStack(alignment: .leading) {
-                        Text("Diet")
-                            .font(.system(size: 17))
-                        Spacer(minLength: 5)
-                        Text(currentShell.getDiet())
-                            .font(.system(size: 14))
-                    }
-                }
-                .padding(.bottom)
-                
-                HStack {
                     Image(systemName: "atom")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -46,6 +30,22 @@ struct ShellDetails: View {
                             .font(.system(size: 17))
                         Spacer(minLength: 5)
                         Text(currentShell.getScientificName())
+                            .font(.system(size: 14))
+                    }
+                }
+                .padding(.bottom)
+                
+                HStack {
+                    Image(systemName: "fork.knife")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 27, height: 27)
+                        .padding(10)
+                    VStack(alignment: .leading) {
+                        Text("Diet")
+                            .font(.system(size: 17))
+                        Spacer(minLength: 5)
+                        Text(currentShell.getDiet())
                             .font(.system(size: 14))
                     }
                 }
