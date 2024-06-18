@@ -14,6 +14,8 @@
 		406645AE2C1698D60098AE49 /* Shellfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645AD2C1698D60098AE49 /* Shellfish.swift */; };
 		406645B02C169D870098AE49 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645AF2C169D870098AE49 /* Camera.swift */; };
 		406645B22C16A0F50098AE49 /* ShellDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645B12C16A0F50098AE49 /* ShellDatabase.swift */; };
+		409089E82C22414300CB978F /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409089E72C22414300CB978F /* ProfileModel.swift */; };
+		409089EA2C22415300CB978F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409089E92C22415300CB978F /* User.swift */; };
 		409112D52C1537A0009AA164 /* ShellFinder_2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */; };
 		409112D72C1537A0009AA164 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112D62C1537A0009AA164 /* ContentView.swift */; };
 		409112D92C1537A1009AA164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409112D82C1537A1009AA164 /* Assets.xcassets */; };
@@ -69,6 +71,8 @@
 		406645AD2C1698D60098AE49 /* Shellfish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shellfish.swift; sourceTree = "<group>"; };
 		406645AF2C169D870098AE49 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		406645B12C16A0F50098AE49 /* ShellDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellDatabase.swift; sourceTree = "<group>"; };
+		409089E72C22414300CB978F /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		409089E92C22415300CB978F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		409112D12C1537A0009AA164 /* ShellFinder 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShellFinder 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0App.swift; sourceTree = "<group>"; };
 		409112D62C1537A0009AA164 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				406645B12C16A0F50098AE49 /* ShellDatabase.swift */,
 				40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */,
 				40F00D462C1FA25E009F77C6 /* HistoryEntry.swift */,
+				409089E72C22414300CB978F /* ProfileModel.swift */,
+				409089E92C22415300CB978F /* User.swift */,
 				409112D82C1537A1009AA164 /* Assets.xcassets */,
 				409112DA2C1537A1009AA164 /* Preview Content */,
 			);
@@ -347,11 +353,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409089E82C22414300CB978F /* ProfileModel.swift in Sources */,
 				406645B02C169D870098AE49 /* Camera.swift in Sources */,
 				40F00D3C2C1BE3D7009F77C6 /* ShellDetails.swift in Sources */,
 				40F00D472C1FA25E009F77C6 /* HistoryEntry.swift in Sources */,
 				406645B22C16A0F50098AE49 /* ShellDatabase.swift in Sources */,
 				40F00D492C1FA30E009F77C6 /* MyShellsModel.swift in Sources */,
+				409089EA2C22415300CB978F /* User.swift in Sources */,
 				23406F202C17E80C00763032 /* ProfilePage.swift in Sources */,
 				23406F1C2C17E70500763032 /* MyShells.swift in Sources */,
 				23406F262C1978E600763032 /* Community.swift in Sources */,
