@@ -4,7 +4,7 @@ struct ShellDatabase {
     
     static var shellMap = [String: Shellfish]();
     
-    static func populateMap() {
+    public static func populateMap() {
         // Atlantic Razor Clam
         shellMap["Atlantic Razor Clam"] = Shellfish(
             name: "Atlantic Razor Clam", scientificName: "Ensis leei",
@@ -117,11 +117,11 @@ struct ShellDatabase {
             averageSize: 3, averageLifeSpan: 15, image: "soft_shell")
     }
     
-    static func getKeys() -> Array<String> {
+    public static func getKeys() -> Array<String> {
         return Array(shellMap.keys) // returns an array of all shell names (keys) in shellMap
     }
     
-    static func getShells() -> Array<Shellfish> {
+    public static func getShells() -> Array<Shellfish> {
         populateMap() // Temporary
         
         var keys = ShellDatabase.getKeys()
@@ -142,11 +142,11 @@ struct ShellDatabase {
     }
     
     // Test function
-    static func printShells() {
+    public static func printShells() {
         print(shellMap)
     }
     
-    static func getShellInfo(shellName: String) -> Shellfish {
+    public static func getShellInfo(shellName: String) -> Shellfish {
         let defaultShell = Shellfish(name: "null", scientificName: "null", diet: "null", habitat: "null", averageSize: 0, averageLifeSpan: 0, image: "null")
         
         // Checks if shell exists in database, else returns default

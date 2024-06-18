@@ -1,8 +1,19 @@
-//
-//  HistoryEntry.swift
-//  ShellFinder 2.0
-//
-//  Created by Yaroslav Matusevich on 6/16/24.
-//
-
 import Foundation
+
+class HistoryEntry: Identifiable {
+    private let shell: Shellfish
+    private let date: String
+    
+    init(shell: Shellfish, date: String) {
+        self.shell = shell
+        self.date = date
+    }
+    
+    public func getShell() -> Shellfish {
+        return shell
+    }
+    
+    public func getDate() -> String {
+        return date
+    }
+}

@@ -9,15 +9,17 @@ struct Camera: View {
     
     var body: some View {
         ZStack {
-            
             CameraPreview(camera: camera)
                 .ignoresSafeArea(.all, edges: .all)
                 .onAppear(perform: {
                     camera.Check()
                 })
+            
+            VStack(alignment: .center) {
+                
+            }
         }
         
-            
     }
 }
 
@@ -77,6 +79,7 @@ class CameraModel: ObservableObject {
     }
     
 }
+
 struct CameraPreview: UIViewRepresentable {
     
     @ObservedObject var camera : CameraModel

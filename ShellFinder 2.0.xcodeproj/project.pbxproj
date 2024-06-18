@@ -22,6 +22,8 @@
 		409112F02C1537A2009AA164 /* ShellFinder_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */; };
 		409112F22C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */; };
 		40F00D3C2C1BE3D7009F77C6 /* ShellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D3B2C1BE3D7009F77C6 /* ShellDetails.swift */; };
+		40F00D472C1FA25E009F77C6 /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D462C1FA25E009F77C6 /* HistoryEntry.swift */; };
+		40F00D492C1FA30E009F77C6 /* MyShellsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITests.swift; sourceTree = "<group>"; };
 		409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		40F00D3B2C1BE3D7009F77C6 /* ShellDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellDetails.swift; sourceTree = "<group>"; };
+		40F00D462C1FA25E009F77C6 /* HistoryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntry.swift; sourceTree = "<group>"; };
+		40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShellsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,8 @@
 				409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */,
 				406645AD2C1698D60098AE49 /* Shellfish.swift */,
 				406645B12C16A0F50098AE49 /* ShellDatabase.swift */,
+				40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */,
+				40F00D462C1FA25E009F77C6 /* HistoryEntry.swift */,
 				409112D82C1537A1009AA164 /* Assets.xcassets */,
 				409112DA2C1537A1009AA164 /* Preview Content */,
 			);
@@ -343,7 +349,9 @@
 			files = (
 				406645B02C169D870098AE49 /* Camera.swift in Sources */,
 				40F00D3C2C1BE3D7009F77C6 /* ShellDetails.swift in Sources */,
+				40F00D472C1FA25E009F77C6 /* HistoryEntry.swift in Sources */,
 				406645B22C16A0F50098AE49 /* ShellDatabase.swift in Sources */,
+				40F00D492C1FA30E009F77C6 /* MyShellsModel.swift in Sources */,
 				23406F202C17E80C00763032 /* ProfilePage.swift in Sources */,
 				23406F1C2C17E70500763032 /* MyShells.swift in Sources */,
 				23406F262C1978E600763032 /* Community.swift in Sources */,
@@ -515,7 +523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShellFinder 2.0/Preview Content\"";
-				DEVELOPMENT_TEAM = XKX94F4LDN;
+				DEVELOPMENT_TEAM = 52532P8Z4C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera permissions.";
@@ -529,7 +537,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = curiousinventor;
+				PRODUCT_BUNDLE_IDENTIFIER = yaroslav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -547,7 +555,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShellFinder 2.0/Preview Content\"";
-				DEVELOPMENT_TEAM = XKX94F4LDN;
+				DEVELOPMENT_TEAM = 52532P8Z4C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera permissions.";
@@ -561,7 +569,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = curiousinventor;
+				PRODUCT_BUNDLE_IDENTIFIER = yaroslav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
