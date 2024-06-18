@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Discover: View {
+struct DiscoverView: View {
     
     var body: some View {
         
@@ -37,5 +37,5 @@ struct Discover: View {
 }
 
 #Preview {
-    Discover()
+    DiscoverView()
 }

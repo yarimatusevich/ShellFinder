@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Community: View {
+struct CommunityView: View {
     var body: some View {
         
         TabView {
@@ -18,5 +18,5 @@ struct Community: View {
     }
 }
 #Preview {
-    Community()
+    CommunityView()
 }

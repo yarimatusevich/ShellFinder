@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct MyShells: View {
+struct MyShellsView: View {
     
     @State private var buttonCount = 2
     var entries = MyShellsModel.getEntries()

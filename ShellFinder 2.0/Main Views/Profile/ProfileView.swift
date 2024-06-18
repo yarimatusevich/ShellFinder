@@ -5,7 +5,8 @@
 //  Created by Drew Visconti on 6/10/24.
 //
 import SwiftUI
-struct ProfilePage: View {
+
+struct ProfileView: View {
     var body: some View {
         
         TabView {
@@ -33,5 +34,5 @@ struct ProfilePage: View {
     }
 }
 #Preview {
-    ProfilePage()
+    ProfileView()
 }

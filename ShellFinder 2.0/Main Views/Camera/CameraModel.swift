@@ -1,27 +1,8 @@
 import Foundation
+import Foundation
 import SwiftUI
 import UIKit
 import AVFoundation
-
-struct Camera: View {
-    
-    @StateObject var camera = CameraModel()
-    
-    var body: some View {
-        ZStack {
-            CameraPreview(camera: camera)
-                .ignoresSafeArea(.all, edges: .all)
-                .onAppear(perform: {
-                    camera.Check()
-                })
-            
-            VStack(alignment: .center) {
-                
-            }
-        }
-        
-    }
-}
 
 class CameraModel: ObservableObject {
     

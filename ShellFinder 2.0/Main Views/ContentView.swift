@@ -13,35 +13,35 @@ struct ContentView: View {
             TabView(selection: $selectedTab) {
                 
                 Group {
-                    MyShells()
+                    MyShellsView()
                         .tabItem {
                             Image(systemName: "fossil.shell")
                             Text("My Shells")
                         }
                         .tag(0)
                     
-                    Community()
+                    CommunityView()
                         .tabItem {
                             Image(systemName: "person.3.fill")
                             Text("Community")
                         }
                         .tag(1)
                     
-                    Camera()
+                    CameraView()
                         .tabItem {
                             Image(systemName: "camera.fill")
                             Text("Identify")
                         }
                         .tag(2)
                     
-                    Discover()
+                    DiscoverView()
                         .tabItem {
                             Image(systemName: "book.fill")
                             Text("Discover")
                         }
                         .tag(3)
                     
-                    ProfilePage()
+                    ProfileView()
                         .tabItem {
                             Image(systemName: "person.fill")
                             Text("Profile")
