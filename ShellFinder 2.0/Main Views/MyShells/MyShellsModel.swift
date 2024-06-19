@@ -23,7 +23,7 @@ class MyShellsModel {
     public static func test() {
         ShellDatabase.populateMap()
         let shell1 = ShellDatabase.getShellInfo(shellName: "Atlantic Razor Clam")
-        let entry1 = HistoryEntry(shell: shell1, date: "1/2/04")
+        let entry1 = HistoryEntry(shell: shell1, date: "June 9th, 2024")
         entries.append(entry1)
     }
 }

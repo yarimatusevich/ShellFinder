@@ -32,7 +32,11 @@ struct MyShellsView: View {
                             .lineSpacing(5)
                         
                         Text(entry.getDate())
+                            .foregroundColor(.gray)
+                            .font(.system(size: 15))
+                            .offset(y: 40)
                     }
+                    
                 }
                 .navigationTitle("My Shells")
                 .navigationBarItems(
