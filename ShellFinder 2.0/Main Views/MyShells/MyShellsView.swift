@@ -24,7 +24,7 @@ struct MyShellsView: View {
                         Text(currentShell.getName())
                             .font(.system(size: 16))
                             .lineSpacing(5)
-                            .padding(.bottom, 5)
+                            .padding(.bottom, 3)
                         
                         Text(currentShell.getScientificName())
                             .font(.system(size: 15))
@@ -34,7 +34,7 @@ struct MyShellsView: View {
                         Text(entry.getDate())
                             .foregroundColor(.gray)
                             .font(.system(size: 15))
-                            .offset(y: 40)
+                            .offset(y: 30)
                     }
                     
                 }
