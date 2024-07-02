@@ -1,12 +1,12 @@
 import Foundation
 import GoogleAPIClientForREST
 
-class GoogleService {
+class GoogleSheetService {
     
-    private let spreadSheetID = "1XB4LqeGk9nEvwhgfSNQ8kIxJSKfgVwjmJswtfkFaQLU"
-    private let range = "Shell Database" // range is entire sheet titled shell database
+    private let spreadsheetID = "1XB4LqeGk9nEvwhgfSNQ8kIxJSKfgVwjmJswtfkFaQLU"
+    private let spreadsheetRange = "Shell Database" // range is entire sheet titled shell database
     
-    public static func fetchData() {
-        GET https://sheets.googleapis.com/v4/spreadsheets/{spreadsheetId}/values/{range}
+    public static func fetchData(spreadSheetID: String, range: String) {
+        let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: spreadSheetID, range: range)
     }
 }
