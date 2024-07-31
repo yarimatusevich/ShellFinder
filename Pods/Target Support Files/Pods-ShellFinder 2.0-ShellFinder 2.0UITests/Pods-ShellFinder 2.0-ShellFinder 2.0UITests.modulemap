@@ -1,6 +1,0 @@
-framework module Pods_ShellFinder_2_0_ShellFinder_2_0UITests {
-  umbrella header "Pods-ShellFinder 2.0-ShellFinder 2.0UITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
