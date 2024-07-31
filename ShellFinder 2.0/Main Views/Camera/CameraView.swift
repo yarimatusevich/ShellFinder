@@ -14,9 +14,30 @@ struct CameraView: View {
                     camera.Check()
                 })
             
-            VStack(alignment: .center) {
+            Image("roundedSquare")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 290)
+                .offset(y: -75)
+            
+            
+            Button(action: {
+                print("button pressed!")
+            }, label: {
                 
-            }
+                ZStack{
+                    Circle()
+                        .frame(width: 75, height: 75)
+                    
+                    Circle()
+                        .stroke(style: StrokeStyle(lineWidth: 2))
+                        .frame(width: 85, height: 85)
+                }
+                Spacer()
+                    .frame(height: 275)
+                .foregroundColor(.white)
+                
+            })
         }
         
     }
