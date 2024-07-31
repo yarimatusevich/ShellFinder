@@ -33,11 +33,11 @@ struct CameraView: View {
                         .stroke(style: StrokeStyle(lineWidth: 2))
                         .frame(width: 85, height: 85)
                 }
-                Spacer()
-                    .frame(height: 275)
                 .foregroundColor(.white)
                 
             })
+            .offset(y: 275)
+            
         }
         
     }
