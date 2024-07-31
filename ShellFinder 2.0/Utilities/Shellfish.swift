@@ -1,13 +1,21 @@
 import Foundation
+import FirebaseCore
+import FirebaseFirestore
 
-class Shellfish: Identifiable {
+struct Shellfish: Identifiable, Codable, CustomStringConvertible {
+    
+    @DocumentID var id: String?
     private let name: String
     private let scientificName: String
     private let diet: String
     private let habitat: String
-    private let averageSize: Double // average size
-    private let averageLifeSpan: Double // average life span
+    private let averageSize: Double
+    private let averageLifeSpan: Double
     private let image: String
+    
+    var description: String {
+        return "\(name)"
+    }
     
     init(name: String, scientificName: String, diet: String, habitat: String, averageSize: Double, averageLifeSpan: Double, image: String) {
         self.name = name
@@ -20,31 +28,17 @@ class Shellfish: Identifiable {
     }
     
     // Getters
-    public func getName() -> String {
-        return name
-    }
+    public func getName() -> String { return name }
     
-    public func getScientificName() -> String {
-        return scientificName
-    }
+    public func getScientificName() -> String { return scientificName }
     
-    public func getDiet() -> String {
-        return diet
-    }
+    public func getDiet() -> String { return diet }
     
-    public func getHabitat() -> String {
-        return habitat
-    }
+    public func getHabitat() -> String { return habitat }
     
-    public func getAverageSize() -> Double {
-        return averageSize
-    }
+    public func getAverageSize() -> Double { return averageSize }
     
-    public func getAverageLifeSpan() -> Double {
-        return averageLifeSpan
-    }
+    public func getAverageLifeSpan() -> Double { return averageLifeSpan }
     
-    public func getImage() -> String {
-        return image
-    }
+    public func getImage() -> String { return image }
 }

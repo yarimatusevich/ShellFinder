@@ -2,12 +2,12 @@ import SwiftUI
 
 struct DiscoverView: View {
     
+    @State private var shells = [Shellfish]()
+    
     var body: some View {
         
-        let shells = ShellDatabase.getShells() // Array of all shells
-        
-        NavigationView {
-            List(shells) { shell in
+        NavigationStack {
+            List(shells, id: \.id ) { shell in
                 NavigationLink(destination: ShellDetails(currentShell: shell)) {
                         HStack {
                             Image(shell.getImage())
@@ -32,7 +32,35 @@ struct DiscoverView: View {
                 }
                 .navigationTitle("Discover")
             }
+            .task {
+                do {
+                    shells = try await DiscoverModel.getShells()
+                    print(shells)
+                } catch {
+                    print("Could not get shells from discover model")
+                }
+            }
         }
+    }
+}
+
+class DiscoverModel {
+    
+    public static func getShells() async throws -> Array<Shellfish> {
+        let decodedShellData = await APIDatabase.fetchShells()
+        var keys = Array(decodedShellData.keys)
+        var shellArr = [Shellfish]()
+        
+        // sorts keys alphabetically
+        keys.sort()
+        
+        for key in keys {
+            if let current = decodedShellData[key] {
+                shellArr.append(current)
+            }
+        }
+        
+        return shellArr
     }
 }
 

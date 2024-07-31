@@ -11,9 +11,15 @@
 		23406F1E2C17E7A900763032 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23406F1D2C17E7A900763032 /* DiscoverView.swift */; };
 		23406F202C17E80C00763032 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23406F1F2C17E80C00763032 /* ProfileView.swift */; };
 		23406F262C1978E600763032 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23406F252C1978E600763032 /* CommunityView.swift */; };
+		4049CCCA2C59B9BB0066398D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4049CCC92C59B9BB0066398D /* GoogleService-Info.plist */; };
+		4049CCCB2C59B9BB0066398D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4049CCC92C59B9BB0066398D /* GoogleService-Info.plist */; };
+		4049CCCC2C59B9BB0066398D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4049CCC92C59B9BB0066398D /* GoogleService-Info.plist */; };
+		4049CCD32C59BAA80066398D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4049CCD22C59BAA80066398D /* FirebaseFirestore */; };
+		4049CCD52C59BAF10066398D /* APIDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4049CCD42C59BAF10066398D /* APIDatabase.swift */; };
+		4049CCD62C59BAF10066398D /* APIDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4049CCD42C59BAF10066398D /* APIDatabase.swift */; };
+		4049CCD72C59BAF10066398D /* APIDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4049CCD42C59BAF10066398D /* APIDatabase.swift */; };
 		406645AE2C1698D60098AE49 /* Shellfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645AD2C1698D60098AE49 /* Shellfish.swift */; };
 		406645B02C169D870098AE49 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645AF2C169D870098AE49 /* CameraView.swift */; };
-		406645B22C16A0F50098AE49 /* ShellDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645B12C16A0F50098AE49 /* ShellDatabase.swift */; };
 		409089E82C22414300CB978F /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409089E72C22414300CB978F /* ProfileModel.swift */; };
 		409089EA2C22415300CB978F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409089E92C22415300CB978F /* User.swift */; };
 		409089ED2C22455200CB978F /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409089EC2C22455200CB978F /* CameraModel.swift */; };
@@ -24,7 +30,6 @@
 		409112E62C1537A1009AA164 /* ShellFinder_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112E52C1537A1009AA164 /* ShellFinder_2_0Tests.swift */; };
 		409112F02C1537A2009AA164 /* ShellFinder_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */; };
 		409112F22C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */; };
-		40B78CDF2C339A1D002D3ED1 /* GoogleSheetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B78CDE2C339A1D002D3ED1 /* GoogleSheetService.swift */; };
 		40F00D3C2C1BE3D7009F77C6 /* ShellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D3B2C1BE3D7009F77C6 /* ShellDetails.swift */; };
 		40F00D472C1FA25E009F77C6 /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D462C1FA25E009F77C6 /* HistoryEntry.swift */; };
 		40F00D492C1FA30E009F77C6 /* MyShellsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */; };
@@ -70,9 +75,10 @@
 		23406F1D2C17E7A900763032 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		23406F1F2C17E80C00763032 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		23406F252C1978E600763032 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		4049CCC92C59B9BB0066398D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4049CCD42C59BAF10066398D /* APIDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDatabase.swift; sourceTree = "<group>"; };
 		406645AD2C1698D60098AE49 /* Shellfish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shellfish.swift; sourceTree = "<group>"; };
 		406645AF2C169D870098AE49 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		406645B12C16A0F50098AE49 /* ShellDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellDatabase.swift; sourceTree = "<group>"; };
 		409089E72C22414300CB978F /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		409089E92C22415300CB978F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		409089EC2C22455200CB978F /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
@@ -86,7 +92,6 @@
 		409112EB2C1537A2009AA164 /* ShellFinder 2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShellFinder 2.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITests.swift; sourceTree = "<group>"; };
 		409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		40B78CDE2C339A1D002D3ED1 /* GoogleSheetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetService.swift; sourceTree = "<group>"; };
 		40F00D3B2C1BE3D7009F77C6 /* ShellDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellDetails.swift; sourceTree = "<group>"; };
 		40F00D462C1FA25E009F77C6 /* HistoryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntry.swift; sourceTree = "<group>"; };
 		40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShellsModel.swift; sourceTree = "<group>"; };
@@ -97,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4049CCD32C59BAA80066398D /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,13 +155,6 @@
 			path = "sf-pro-display";
 			sourceTree = "<group>";
 		};
-		328A40DCA3073963B6832A4D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		409089EB2C22444000CB978F /* Main Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,11 +200,10 @@
 			isa = PBXGroup;
 			children = (
 				40F00D462C1FA25E009F77C6 /* HistoryEntry.swift */,
-				406645B12C16A0F50098AE49 /* ShellDatabase.swift */,
 				409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */,
 				406645AD2C1698D60098AE49 /* Shellfish.swift */,
 				409089E92C22415300CB978F /* User.swift */,
-				40B78CDE2C339A1D002D3ED1 /* GoogleSheetService.swift */,
+				4049CCD42C59BAF10066398D /* APIDatabase.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -213,12 +211,12 @@
 		409112C82C1537A0009AA164 = {
 			isa = PBXGroup;
 			children = (
+				4049CCC92C59B9BB0066398D /* GoogleService-Info.plist */,
 				231DDD6D2C1A24BD00CEC33F /* sf-pro-display */,
 				409112D32C1537A0009AA164 /* ShellFinder 2.0 */,
 				409112E42C1537A1009AA164 /* ShellFinder 2.0Tests */,
 				409112EE2C1537A2009AA164 /* ShellFinder 2.0UITests */,
 				409112D22C1537A0009AA164 /* Products */,
-				328A40DCA3073963B6832A4D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,6 +283,9 @@
 			dependencies = (
 			);
 			name = "ShellFinder 2.0";
+			packageProductDependencies = (
+				4049CCD22C59BAA80066398D /* FirebaseFirestore */,
+			);
 			productName = "ShellFinder 2.0";
 			productReference = 409112D12C1537A0009AA164 /* ShellFinder 2.0.app */;
 			productType = "com.apple.product-type.application";
@@ -357,6 +358,9 @@
 				Base,
 			);
 			mainGroup = 409112C82C1537A0009AA164;
+			packageReferences = (
+				4049CCD12C59BAA80066398D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 409112D22C1537A0009AA164 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -375,6 +379,7 @@
 			files = (
 				409112DC2C1537A1009AA164 /* Preview Assets.xcassets in Resources */,
 				409112D92C1537A1009AA164 /* Assets.xcassets in Resources */,
+				4049CCCA2C59B9BB0066398D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4049CCCB2C59B9BB0066398D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4049CCCC2C59B9BB0066398D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,14 +411,13 @@
 				409089ED2C22455200CB978F /* CameraModel.swift in Sources */,
 				40F00D3C2C1BE3D7009F77C6 /* ShellDetails.swift in Sources */,
 				40F00D472C1FA25E009F77C6 /* HistoryEntry.swift in Sources */,
-				406645B22C16A0F50098AE49 /* ShellDatabase.swift in Sources */,
 				40F00D492C1FA30E009F77C6 /* MyShellsModel.swift in Sources */,
 				409089EA2C22415300CB978F /* User.swift in Sources */,
 				23406F202C17E80C00763032 /* ProfileView.swift in Sources */,
 				23406F1C2C17E70500763032 /* MyShellsView.swift in Sources */,
 				23406F262C1978E600763032 /* CommunityView.swift in Sources */,
 				409112D72C1537A0009AA164 /* ContentView.swift in Sources */,
-				40B78CDF2C339A1D002D3ED1 /* GoogleSheetService.swift in Sources */,
+				4049CCD52C59BAF10066398D /* APIDatabase.swift in Sources */,
 				409112D52C1537A0009AA164 /* ShellFinder_2_0App.swift in Sources */,
 				406645AE2C1698D60098AE49 /* Shellfish.swift in Sources */,
 				23406F1E2C17E7A900763032 /* DiscoverView.swift in Sources */,
@@ -423,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				409112E62C1537A1009AA164 /* ShellFinder_2_0Tests.swift in Sources */,
+				4049CCD62C59BAF10066398D /* APIDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4049CCD72C59BAF10066398D /* APIDatabase.swift in Sources */,
 				409112F02C1537A2009AA164 /* ShellFinder_2_0UITests.swift in Sources */,
 				409112F22C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift in Sources */,
 			);
@@ -579,7 +587,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShellFinder 2.0/Preview Content\"";
-				DEVELOPMENT_TEAM = XKX94F4LDN;
+				DEVELOPMENT_TEAM = 52532P8Z4C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera permissions.";
@@ -593,7 +601,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = viscontj;
+				PRODUCT_BUNDLE_IDENTIFIER = "-com.curiousinventors.shellfinder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -611,7 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShellFinder 2.0/Preview Content\"";
-				DEVELOPMENT_TEAM = XKX94F4LDN;
+				DEVELOPMENT_TEAM = 52532P8Z4C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera permissions.";
@@ -625,7 +633,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = viscontj;
+				PRODUCT_BUNDLE_IDENTIFIER = "-com.curiousinventors.shellfinder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -750,6 +758,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4049CCD12C59BAA80066398D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4049CCD22C59BAA80066398D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4049CCD12C59BAA80066398D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 409112C92C1537A0009AA164 /* Project object */;
 }
