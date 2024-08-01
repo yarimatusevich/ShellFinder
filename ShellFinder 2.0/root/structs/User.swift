@@ -1,8 +1,5 @@
 import Foundation
 
-// Going to have to create some sort of user database
-// Will research
-
 class User {
     private let name: String
     private let id: String // user name, unique to every user
