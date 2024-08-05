@@ -47,7 +47,7 @@ struct DiscoverView: View {
 class DiscoverModel {
     
     public static func getShells() async throws -> Array<Shellfish> {
-        let decodedShellData = await APIDatabase.fetchShells()
+        let decodedShellData = await ShellAPI.fetchShells()
         var keys = Array(decodedShellData.keys)
         var shellArr = [Shellfish]()
         

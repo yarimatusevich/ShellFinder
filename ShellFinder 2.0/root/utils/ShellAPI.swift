@@ -2,9 +2,10 @@ import Foundation
 import FirebaseCore
 import FirebaseFirestore
 
-class APIDatabase {
+class ShellAPI {
     
     // TODO: Implement proper error handling
+    // TODO: Implement security measures
     
     private static let db = Firestore.firestore() // cloud storage database
     
