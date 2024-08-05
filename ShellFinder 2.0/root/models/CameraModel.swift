@@ -106,7 +106,9 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
                 // Print String Response
                 print(String(data: data, encoding: .utf8)!)
                 print("did it!")
-            }).resume()
+            })
+            .resume()
+            
         }
     }
     
