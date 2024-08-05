@@ -22,7 +22,8 @@ struct CameraView: View {
             
             
             Button(action: {
-                print("button pressed!")
+                print("button pressed!") 
+                camera.capturePhoto()
             }, label: {
                 
                 ZStack{
