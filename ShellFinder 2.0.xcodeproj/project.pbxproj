@@ -157,9 +157,20 @@
 			path = "sf-pro-display";
 			sourceTree = "<group>";
 		};
+		401A1A362C615C2400A28B0A /* models */ = {
+			isa = PBXGroup;
+			children = (
+				409089E72C22414300CB978F /* ProfileModel.swift */,
+				40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */,
+				409089EC2C22455200CB978F /* CameraModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		407D460E2C5BFA3100BED816 /* root */ = {
 			isa = PBXGroup;
 			children = (
+				401A1A362C615C2400A28B0A /* models */,
 				407D46122C5BFAD600BED816 /* structs */,
 				409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */,
 				407D46132C5BFAFB00BED816 /* utils */,
@@ -172,11 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				23406F1F2C17E80C00763032 /* ProfileView.swift */,
-				409089E72C22414300CB978F /* ProfileModel.swift */,
 				23406F1B2C17E70500763032 /* MyShellsView.swift */,
-				40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */,
 				40F00D3B2C1BE3D7009F77C6 /* ShellDetails.swift */,
-				409089EC2C22455200CB978F /* CameraModel.swift */,
 				406645AF2C169D870098AE49 /* CameraView.swift */,
 				23406F252C1978E600763032 /* CommunityView.swift */,
 				409112D62C1537A0009AA164 /* ContentView.swift */,
