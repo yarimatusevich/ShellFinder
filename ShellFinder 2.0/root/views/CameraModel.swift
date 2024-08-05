@@ -34,8 +34,9 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
         default:
             return
         }
-        
     }
+    
+    // TODO: Create seperate class for functions related to AI, call methods from that class in this class for clarity
     
     func setUp(){
         do {
@@ -67,8 +68,6 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     func capturePhoto() {
         let settings = AVCapturePhotoSettings()
         output.capturePhoto(with: settings, delegate: self)
-        
-        
     }
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
@@ -113,7 +112,6 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     }
     
     func AImodel() {
-        
         
     }
 }
