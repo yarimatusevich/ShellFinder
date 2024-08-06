@@ -51,10 +51,6 @@ class Authentication {
         user?.sendEmailVerification(beforeUpdatingEmail: newEmail)
     }
     
-    public static func changeDisplayName(name: String) {
-        user?.displayName
-    }
-    
     public static func changePassword() {
         // TODO
     }
