@@ -1,6 +1,7 @@
 import Foundation
 import FirebaseCore
 import FirebaseFirestore
+import FirebaseAuth
 
 class ShellAPI {
     
@@ -31,5 +32,9 @@ class ShellAPI {
         }
         
         return dict
+    }
+    
+    public static func setUser(user: User) {
+        
     }
 }
