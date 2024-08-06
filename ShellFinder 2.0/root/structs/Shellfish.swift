@@ -3,7 +3,6 @@ import FirebaseCore
 import FirebaseFirestore
 
 struct Shellfish: Identifiable, Codable, CustomStringConvertible {
-    
     @DocumentID var id: String?
     private let name: String
     private let scientificName: String
