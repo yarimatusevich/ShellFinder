@@ -13,42 +13,42 @@ struct ContentView: View {
             TabView(selection: $selectedTab) {
                 
                 Group {
-                    MyShellsView()
+                    ProfileView()
                         .tabItem {
-                            Image(systemName: "fossil.shell")
-                            Text("My Shells")
+                            Image(systemName: "person.fill")
+                            Text("Profile")
                         }
                         .tag(0)
-                    
-                    CommunityView()
-                        .tabItem {
-                            Image(systemName: "person.3.fill")
-                            Text("Community")
-                        }
-                        .tag(1)
                     
                     CameraView()
                         .tabItem {
                             Image(systemName: "camera.fill")
                             Text("Identify")
                         }
-                        .tag(2)
+                        .tag(1)
                     
                     DiscoverView()
                         .tabItem {
                             Image(systemName: "book.fill")
                             Text("Discover")
                         }
-                        .tag(3)
+                        .tag(2)
                     
-                    ProfileView()
-                        .tabItem {
-                            Image(systemName: "person.fill")
-                            Text("Profile")
-                        }
-                        .tag(4)
+//                    MyShellsView()
+//                        .tabItem {
+//                            Image(systemName: "fossil.shell")
+//                            Text("My Shells")
+//                        }
+//                        .tag(0)
+                    
+//                    CommunityView()
+//                        .tabItem {
+//                            Image(systemName: "person.3.fill")
+//                            Text("Community")
+//                        }
+//                        .tag(1)
                 }
-                .toolbarBackground(.white, for: .tabBar)
+                //.toolbarBackground(.white, for: .tabBar)
                 .toolbarBackground(.visible, for: .tabBar)
             }
         }

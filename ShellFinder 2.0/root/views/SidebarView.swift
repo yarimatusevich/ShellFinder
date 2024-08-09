@@ -6,13 +6,22 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct SidebarView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text("Home")
+                .padding(.top, 100)
+            Text("Profile")
+                .padding(.top, 20)
+            Text("Settings")
+                .padding(.top, 20)
+            Spacer()
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+        .background(Color.blue)
+        .foregroundColor(.white)
     }
-}
-
-#Preview {
-    SidebarView()
 }
