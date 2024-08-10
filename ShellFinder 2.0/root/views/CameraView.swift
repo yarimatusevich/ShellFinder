@@ -40,7 +40,19 @@ struct CameraView: View {
             })
             .offset(y: 275)
             
-            
+            Button(action: {
+                withAnimation {
+                    isSidebarVisible.toggle()
+                }
+            }) {
+                Image(systemName: "line.horizontal.3")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.white)
+                    .frame(width: 30)
+                    .padding()
+                }
+                .offset(x: -150, y: -300)
             
             SidebarView()
                 .frame(width: 300)
@@ -63,22 +75,10 @@ struct CameraView: View {
                         }
                     }
                 )
-                .overlay(
-                    Button(action: {
-                        withAnimation {
-                            isSidebarVisible.toggle()
-                        }
-                    }) {
-                        Image(systemName: "line.horizontal.3")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.white)
-                            .frame(width: 30)
-                            .padding()
-                    }
-                    .offset(x: 20, y: 50),
-                    alignment: .topLeading
-                )
+                //.overlay(
+                    
+                    //alignment: .topLeading
+                //)
         
     }
 }
