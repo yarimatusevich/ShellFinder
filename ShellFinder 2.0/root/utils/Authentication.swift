@@ -7,17 +7,8 @@ class Authentication {
     private static let user = Auth.auth().currentUser
     
     // TODO: integrate into firestore DB
-    // TODO: create metods for updating user display name and user photo
-    
-    // Checks if user is logged in
-    public static func checkAuthStatus() {
-        Auth.auth().addStateDidChangeListener { auth, user in
-            if let user = user {
-                let uid = user.uid
-                let email = user.email
-            }
-        }
-    }
+    // TODO: create methods for updating user display name and user photo
+    // TODO: create function for forgot password
     
     public static func registerUser(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
@@ -51,8 +42,8 @@ class Authentication {
         user?.sendEmailVerification(beforeUpdatingEmail: newEmail)
     }
     
-    public static func changePassword() {
-        // TODO
+    public static func changePassword(newPassword: String) {
+        user?.updatePassword(to: newPassword)
     }
     
     public static func deleteUser() {
