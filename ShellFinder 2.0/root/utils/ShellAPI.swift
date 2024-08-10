@@ -21,8 +21,6 @@ class ShellAPI {
             for document in querySnapshot.documents {
                 let shell = try document.data(as: Shellfish.self)
                 
-                print(shell)
-                
                 // Maps each document id to its corresponding shell
                 dict[document.documentID] = shell
             }
