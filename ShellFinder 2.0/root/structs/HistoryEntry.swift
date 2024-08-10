@@ -1,6 +1,6 @@
 import Foundation
 
-class HistoryEntry: Identifiable {
+class HistoryEntry: Identifiable, Codable {
     private let shell: Shellfish
     private let date: String
     
@@ -9,11 +9,8 @@ class HistoryEntry: Identifiable {
         self.date = date
     }
     
-    public func getShell() -> Shellfish {
-        return shell
-    }
+    // Getters
+    public func getShell() -> Shellfish { return shell }
     
-    public func getDate() -> String {
-        return date
-    }
+    public func getDate() -> String { return date }
 }

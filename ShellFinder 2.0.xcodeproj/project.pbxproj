@@ -33,7 +33,7 @@
 		409112E62C1537A1009AA164 /* ShellFinder_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112E52C1537A1009AA164 /* ShellFinder_2_0Tests.swift */; };
 		409112F02C1537A2009AA164 /* ShellFinder_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */; };
 		409112F22C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */; };
-		40F00D3C2C1BE3D7009F77C6 /* ShellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D3B2C1BE3D7009F77C6 /* ShellDetails.swift */; };
+		40F00D3C2C1BE3D7009F77C6 /* ShellDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D3B2C1BE3D7009F77C6 /* ShellDetailsView.swift */; };
 		40F00D472C1FA25E009F77C6 /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D462C1FA25E009F77C6 /* HistoryEntry.swift */; };
 		40F00D492C1FA30E009F77C6 /* MyShellsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */; };
 /* End PBXBuildFile section */
@@ -90,7 +90,7 @@
 		409112EB2C1537A2009AA164 /* ShellFinder 2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShellFinder 2.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		409112EF2C1537A2009AA164 /* ShellFinder_2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITests.swift; sourceTree = "<group>"; };
 		409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		40F00D3B2C1BE3D7009F77C6 /* ShellDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellDetails.swift; sourceTree = "<group>"; };
+		40F00D3B2C1BE3D7009F77C6 /* ShellDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellDetailsView.swift; sourceTree = "<group>"; };
 		40F00D462C1FA25E009F77C6 /* HistoryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntry.swift; sourceTree = "<group>"; };
 		40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShellsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,7 +153,6 @@
 			children = (
 				401A1A362C615C2400A28B0A /* models */,
 				407D46122C5BFAD600BED816 /* structs */,
-				409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */,
 				407D46132C5BFAFB00BED816 /* utils */,
 				407D460F2C5BFA7300BED816 /* views */,
 			);
@@ -163,10 +162,10 @@
 		407D460F2C5BFA7300BED816 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				40F00D3B2C1BE3D7009F77C6 /* ShellDetailsView.swift */,
 				23406F1F2C17E80C00763032 /* ProfileView.swift */,
 				2322BF5D2C66BDCB0084B3A3 /* SidebarView.swift */,
 				23406F1B2C17E70500763032 /* MyShellsView.swift */,
-				40F00D3B2C1BE3D7009F77C6 /* ShellDetails.swift */,
 				406645AF2C169D870098AE49 /* CameraView.swift */,
 				23406F252C1978E600763032 /* CommunityView.swift */,
 				409112D62C1537A0009AA164 /* ContentView.swift */,
@@ -189,6 +188,7 @@
 		407D46132C5BFAFB00BED816 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */,
 				4049CCD42C59BAF10066398D /* ShellAPI.swift */,
 				407D46102C5BFAA900BED816 /* Authentication.swift */,
 				401A1A392C615C7400A28B0A /* AIModel.swift */,
@@ -397,7 +397,7 @@
 				406645B02C169D870098AE49 /* CameraView.swift in Sources */,
 				2322BF5E2C66BDCB0084B3A3 /* SidebarView.swift in Sources */,
 				409089ED2C22455200CB978F /* CameraModel.swift in Sources */,
-				40F00D3C2C1BE3D7009F77C6 /* ShellDetails.swift in Sources */,
+				40F00D3C2C1BE3D7009F77C6 /* ShellDetailsView.swift in Sources */,
 				40F00D472C1FA25E009F77C6 /* HistoryEntry.swift in Sources */,
 				40F00D492C1FA30E009F77C6 /* MyShellsModel.swift in Sources */,
 				401A1A3C2C61AF9A00A28B0A /* AuthView.swift in Sources */,
@@ -576,7 +576,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShellFinder 2.0/Preview Content\"";
-				DEVELOPMENT_TEAM = XKX94F4LDN;
+				DEVELOPMENT_TEAM = 52532P8Z4C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera permissions.";
@@ -590,7 +590,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.curiousinventors.shellfinde;
+				PRODUCT_BUNDLE_IDENTIFIER = com.curiousinventors.shellfinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -608,7 +608,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShellFinder 2.0/Preview Content\"";
-				DEVELOPMENT_TEAM = XKX94F4LDN;
+				DEVELOPMENT_TEAM = 52532P8Z4C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera permissions.";
@@ -622,7 +622,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.curiousinventors.shellfinde;
+				PRODUCT_BUNDLE_IDENTIFIER = com.curiousinventors.shellfinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
