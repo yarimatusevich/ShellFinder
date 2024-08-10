@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ShellDetails: View {
+struct ShellDetailsView: View {
     
     var currentShell: Shellfish;
     
@@ -108,5 +108,5 @@ struct ShellDetails: View {
 }
 
 #Preview {
-    ShellDetails(currentShell: Shellfish(name: "Null", scientificName: "Null", diet: "Null", habitat: "Null", averageSize: 0, averageLifeSpan: 0, image: "Null"))
+    ShellDetailsView(currentShell: Shellfish(name: "Null", scientificName: "Null", diet: "Null", habitat: "Null", averageSize: 0, averageLifeSpan: 0, image: "Null"))
 }
