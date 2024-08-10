@@ -43,24 +43,25 @@ struct CameraView: View {
             
             
             SidebarView()
-                            .frame(width: 300)
-                            .offset(x: isSidebarVisible ? 0 : -450)
-                            .animation(.easeInOut(duration: 0.3))
+                .frame(width: 300)
+                .offset(x: -50)
+                .offset(x: isSidebarVisible ? 0 : -450)
+                .animation(.easeInOut(duration: 0.3))
             
         }
         .gesture(
-                    DragGesture()
-                        .onEnded { value in
-                            if value.translation.width > 100 {
-                                withAnimation {
-                                    isSidebarVisible = true
-                                }
-                            } else if value.translation.width < -100 {
-                                withAnimation {
-                                    isSidebarVisible = false
-                                }
+                DragGesture()
+                    .onEnded { value in
+                        if value.translation.width > 100 {
+                            withAnimation {
+                                isSidebarVisible = true
+                            }
+                        } else if value.translation.width < -100 {
+                            withAnimation {
+                                isSidebarVisible = false
                             }
                         }
+                    }
                 )
                 .overlay(
                     Button(action: {
