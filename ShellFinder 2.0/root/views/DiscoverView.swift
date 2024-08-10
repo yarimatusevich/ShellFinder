@@ -8,7 +8,7 @@ struct DiscoverView: View {
         
         NavigationStack {
             List(shells, id: \.id ) { shell in
-                NavigationLink(destination: ShellDetails(currentShell: shell)) {
+                NavigationLink(destination: ShellDetailsView(currentShell: shell)) {
                         HStack {
                             Image(shell.getImage())
                                 .resizable()
@@ -35,7 +35,6 @@ struct DiscoverView: View {
             .task {
                 do {
                     shells = try await DiscoverModel.getShells()
-                    print(shells)
                 } catch {
                     print("Could not get shells from discover model")
                 }
