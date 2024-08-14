@@ -59,9 +59,9 @@ struct AuthView: View {
         }
         // On appear checks if user is already logged in
         .onAppear {
-            Auth.auth().addStateDidChangeListener { auth, user in
+            _ = Auth.auth().addStateDidChangeListener { auth, user in
                 if (user != nil) {
-                    userIsLoggedIn.toggle()
+                    userIsLoggedIn = true
                 }
             }
         }
