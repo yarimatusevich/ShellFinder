@@ -3,14 +3,23 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 
-class ShellAPI {
+class ShellFinderNetwork: ObservableObject{
     
     // TODO: Implement proper error handling
     // TODO: Implement security measures
     
-    private static let db = Firestore.firestore() // cloud storage database
     
-    public static func fetchShells() async -> [String: Shellfish] {
+    private let db = Firestore.firestore() // cloud storage database
+    public var shellDB = [String: Shellfish]() // all shells in database
+    
+    init() {
+        // updates shellDB with up to date shells from the API
+        Task {
+            shellDB = await fetchShells()
+        }
+    }
+    
+    private func fetchShells() async -> [String: Shellfish] {
         
         var dict = [String: Shellfish]()
         
@@ -32,7 +41,7 @@ class ShellAPI {
         return dict
     }
     
-    public static func setUser(user: User) {
+    public func setUser(user: User) {
         
     }
 }
