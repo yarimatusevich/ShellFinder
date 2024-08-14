@@ -10,7 +10,7 @@ class ShellFinderNetwork: ObservableObject {
     
     
     private let db = Firestore.firestore() // cloud storage database
-    public var shellDB = [String: Shellfish]() // all shells in database
+    private var shellDB = [String: Shellfish]() // all shells in database
     
     init() {
         // updates shellDB with up to date shells from the API
