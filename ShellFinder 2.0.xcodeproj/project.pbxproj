@@ -17,7 +17,7 @@
 		4049CCCB2C59B9BB0066398D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4049CCC92C59B9BB0066398D /* GoogleService-Info.plist */; };
 		4049CCCC2C59B9BB0066398D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4049CCC92C59B9BB0066398D /* GoogleService-Info.plist */; };
 		4049CCD32C59BAA80066398D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4049CCD22C59BAA80066398D /* FirebaseFirestore */; };
-		4049CCD52C59BAF10066398D /* ShellAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4049CCD42C59BAF10066398D /* ShellAPI.swift */; };
+		4049CCD52C59BAF10066398D /* ShellFinderNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4049CCD42C59BAF10066398D /* ShellFinderNetwork.swift */; };
 		4049CCD92C5BF0500066398D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4049CCD82C5BF0500066398D /* FirebaseAuth */; };
 		406645AE2C1698D60098AE49 /* Shellfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645AD2C1698D60098AE49 /* Shellfish.swift */; };
 		406645B02C169D870098AE49 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645AF2C169D870098AE49 /* CameraView.swift */; };
@@ -71,7 +71,7 @@
 		401A1A392C615C7400A28B0A /* AIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIModel.swift; sourceTree = "<group>"; };
 		401A1A3B2C61AF9A00A28B0A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		4049CCC92C59B9BB0066398D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4049CCD42C59BAF10066398D /* ShellAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellAPI.swift; sourceTree = "<group>"; };
+		4049CCD42C59BAF10066398D /* ShellFinderNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinderNetwork.swift; sourceTree = "<group>"; };
 		406645AD2C1698D60098AE49 /* Shellfish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shellfish.swift; sourceTree = "<group>"; };
 		406645AF2C169D870098AE49 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		407D46102C5BFAA900BED816 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */,
-				4049CCD42C59BAF10066398D /* ShellAPI.swift */,
+				4049CCD42C59BAF10066398D /* ShellFinderNetwork.swift */,
 				407D46102C5BFAA900BED816 /* Authentication.swift */,
 				401A1A392C615C7400A28B0A /* AIModel.swift */,
 			);
@@ -404,7 +404,7 @@
 				23406F1C2C17E70500763032 /* MyShellsView.swift in Sources */,
 				401A1A3A2C615C7400A28B0A /* AIModel.swift in Sources */,
 				409112D72C1537A0009AA164 /* ContentView.swift in Sources */,
-				4049CCD52C59BAF10066398D /* ShellAPI.swift in Sources */,
+				4049CCD52C59BAF10066398D /* ShellFinderNetwork.swift in Sources */,
 				409112D52C1537A0009AA164 /* ShellFinder_2_0App.swift in Sources */,
 				406645AE2C1698D60098AE49 /* Shellfish.swift in Sources */,
 				23406F1E2C17E7A900763032 /* DiscoverView.swift in Sources */,
