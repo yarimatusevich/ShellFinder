@@ -41,7 +41,7 @@ struct AuthView: View {
             
             // Sign up button
             Button {
-                Authentication.registerUser(email: email, password: password)
+                ShellFinderAuth.registerUser(email: email, password: password)
             } label: {
                 Text("Sign up")
             }
@@ -94,7 +94,7 @@ struct LoginView: View {
             .padding(.vertical, 10)
             
             Button {
-                Authentication.logIn(email: email, password: password)
+                ShellFinderAuth.logIn(email: email, password: password)
             } label: {
                 Text("Log in")
             }
