@@ -32,7 +32,7 @@ class ShellFinderNetwork: ObservableObject {
                 let shell = try document.data(as: Shellfish.self)
                 
                 // Maps each document id to its corresponding shell
-                dict[document.documentID] = shell
+                dict[shell.getName()] = shell
             }
             
         } catch {
@@ -53,6 +53,31 @@ class ShellFinderNetwork: ObservableObject {
     }
     
     public func setUser(user: User) {
+        let collectionRef = db.collection("users")
+        
+        do {
+            try collectionRef.addDocument(from: user.self)
+            
+        } catch {
+            print("Failed to set user: \(error.localizedDescription)")
+        }
+    }
+    
+    // Gets a user information from unique id attached to each user in database
+    public func getUser(userId: String) async -> User? {
+        let docRef = db.collection("users").document(userId)
+        
+        do {
+            let user = try await docRef.getDocument(as: User.self)
+            return user
+            
+        } catch {
+            print("Failed getting user: \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
+    public func getUserHistory(currentUser: User) async {
         
     }
 }
