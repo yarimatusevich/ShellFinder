@@ -8,7 +8,7 @@ struct CameraView: View {
     @State private var dragOffset: CGFloat = 0.0
     private let sidebarWidth: CGFloat = 300.0
     @State private var isAIResult = false
-    @Environment var network: ShellFinderNetwork
+    @EnvironmentObject var network: ShellFinderNetwork
     
     var body: some View {
         
