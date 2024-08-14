@@ -2,7 +2,7 @@ import Foundation
 import Firebase
 import FirebaseAuth
 
-class Authentication: ObservableObject {
+class ShellFinderAuth: ObservableObject {
     
     private static let user = Auth.auth().currentUser
     

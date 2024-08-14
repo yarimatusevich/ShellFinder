@@ -21,7 +21,7 @@
 		4049CCD92C5BF0500066398D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4049CCD82C5BF0500066398D /* FirebaseAuth */; };
 		406645AE2C1698D60098AE49 /* Shellfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645AD2C1698D60098AE49 /* Shellfish.swift */; };
 		406645B02C169D870098AE49 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406645AF2C169D870098AE49 /* CameraView.swift */; };
-		407D46112C5BFAA900BED816 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D46102C5BFAA900BED816 /* Authentication.swift */; };
+		407D46112C5BFAA900BED816 /* ShellFinderAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D46102C5BFAA900BED816 /* ShellFinderAuth.swift */; };
 		409089E82C22414300CB978F /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409089E72C22414300CB978F /* ProfileModel.swift */; };
 		409089EA2C22415300CB978F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409089E92C22415300CB978F /* User.swift */; };
 		409089ED2C22455200CB978F /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409089EC2C22455200CB978F /* CameraModel.swift */; };
@@ -74,7 +74,7 @@
 		4049CCD42C59BAF10066398D /* ShellFinderNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinderNetwork.swift; sourceTree = "<group>"; };
 		406645AD2C1698D60098AE49 /* Shellfish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shellfish.swift; sourceTree = "<group>"; };
 		406645AF2C169D870098AE49 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		407D46102C5BFAA900BED816 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		407D46102C5BFAA900BED816 /* ShellFinderAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinderAuth.swift; sourceTree = "<group>"; };
 		409089E72C22414300CB978F /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		409089E92C22415300CB978F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		409089EC2C22455200CB978F /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 			children = (
 				409112D42C1537A0009AA164 /* ShellFinder_2_0App.swift */,
 				4049CCD42C59BAF10066398D /* ShellFinderNetwork.swift */,
-				407D46102C5BFAA900BED816 /* Authentication.swift */,
+				407D46102C5BFAA900BED816 /* ShellFinderAuth.swift */,
 				401A1A392C615C7400A28B0A /* AIModel.swift */,
 			);
 			path = utils;
@@ -399,7 +399,7 @@
 				40F00D492C1FA30E009F77C6 /* MyShellsModel.swift in Sources */,
 				401A1A3C2C61AF9A00A28B0A /* AuthView.swift in Sources */,
 				409089EA2C22415300CB978F /* User.swift in Sources */,
-				407D46112C5BFAA900BED816 /* Authentication.swift in Sources */,
+				407D46112C5BFAA900BED816 /* ShellFinderAuth.swift in Sources */,
 				23406F202C17E80C00763032 /* ProfileView.swift in Sources */,
 				23406F1C2C17E70500763032 /* MyShellsView.swift in Sources */,
 				401A1A3A2C615C7400A28B0A /* AIModel.swift in Sources */,
