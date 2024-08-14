@@ -3,7 +3,7 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 
-class ShellFinderNetwork: ObservableObject{
+class ShellFinderNetwork: ObservableObject {
     
     // TODO: Implement proper error handling
     // TODO: Implement security measures
@@ -19,6 +19,7 @@ class ShellFinderNetwork: ObservableObject{
         }
     }
     
+    // Gets all shells currently in the cloud
     private func fetchShells() async -> [String: Shellfish] {
         
         var dict = [String: Shellfish]()
@@ -39,6 +40,16 @@ class ShellFinderNetwork: ObservableObject{
         }
         
         return dict
+    }
+    
+    public func getShell(shell: String) -> Shellfish {
+        // TODO: implement error handling??
+        return shellDB[shell]!
+    }
+    
+    // returns an array of all names of shells in database
+    public func getShellNames() -> Array<String> {
+        return Array(shellDB.keys)
     }
     
     public func setUser(user: User) {
