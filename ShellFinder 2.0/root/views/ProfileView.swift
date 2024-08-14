@@ -26,6 +26,12 @@ struct ProfileView: View {
                 Text("Edit profile")
             })
             
+            Button(action: {
+                ShellFinderAuth.logOut()
+            }, label: {
+                Text("Log out")
+            })
+            
             HStack {
                 Image(systemName: "magnifyingglass.circle.fill")
                     .resizable()
