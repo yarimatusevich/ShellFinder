@@ -4,6 +4,7 @@ import UIKit
 struct ContentView: View {
     @State var selectedTab = 1
     @State private var isShowingImagePicker = false
+    @State private var isSidebarVisible = false
     
     var body: some View {
         
@@ -19,7 +20,7 @@ struct ContentView: View {
                         }
                         .tag(0)
                     
-                    CameraView()
+                    CameraView(isSidebarVisible: $isSidebarVisible)
                         .tabItem {
                             Image(systemName: "camera.fill")
                             Text("Identify")
@@ -34,6 +35,12 @@ struct ContentView: View {
                         .tag(2)
                 }
                 .toolbarBackground(.visible, for: .tabBar)
+                .onChange(of: selectedTab) { oldValue, newValue in
+                                // Hide the sidebar when switching away from the Camera tab
+                                if newValue != 1 {
+                                    isSidebarVisible = false
+                                }
+                            }
             }
         }
     }

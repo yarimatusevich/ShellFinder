@@ -11,7 +11,6 @@ struct SidebarView: View {
         VStack(alignment: .leading) {
             
             Button(action: {
-                print("1")
                 isSettingsSheet.toggle()
             }, label: {
                 HStack {
@@ -23,7 +22,6 @@ struct SidebarView: View {
             .padding(.top, 100)
             
             Button(action: {
-                print("2")
                 isProfileSheet.toggle()
             }, label: {
                 HStack {
@@ -42,7 +40,7 @@ struct SidebarView: View {
         .foregroundColor(.black)
         .font(.system(size: 20))
         .sheet(isPresented: $isSettingsSheet, content: {
-            Text("Settings")
+            SettingsView(isSettingsSheet: $isSettingsSheet)
         })
         
         .sheet(isPresented: $isProfileSheet, content: {

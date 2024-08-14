@@ -4,7 +4,7 @@ import SwiftUI
 struct CameraView: View {
     
     @StateObject var camera = CameraModel()
-    @State private var isSidebarVisible = false
+    @Binding var isSidebarVisible: Bool
     @State private var dragOffset: CGFloat = 0.0
     private let sidebarWidth: CGFloat = 300.0
     
