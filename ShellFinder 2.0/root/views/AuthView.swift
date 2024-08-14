@@ -12,11 +12,11 @@ struct AuthView: View {
         if (userIsLoggedIn) {
             ContentView()
         } else {
-            content
+            authViewContent
         }
     }
     
-    var content: some View {
+    var authViewContent: some View {
         VStack {
             Text("Welcome to ShellFinder")
                 .font(.system(size: 40))
