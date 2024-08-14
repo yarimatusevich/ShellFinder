@@ -7,6 +7,8 @@ struct CameraView: View {
     @Binding var isSidebarVisible: Bool
     @State private var dragOffset: CGFloat = 0.0
     private let sidebarWidth: CGFloat = 300.0
+    @State private var isAIResult = false
+    @Environment var network: ShellFinderNetwork
     
     var body: some View {
         
@@ -27,6 +29,7 @@ struct CameraView: View {
             Button(action: {
                 print("button pressed!") 
                 camera.capturePhoto()
+                isAIResult.toggle()
             }, label: {
                 
                 ZStack{
@@ -101,6 +104,9 @@ struct CameraView: View {
                                 // Reset dragOffset after ending drag
                                 dragOffset = 0
                             }
-                    )
+        )
+        .sheet(isPresented: $isAIResult) {
+            ShellDetailsView(currentShell: network.getShell(shell: "Atlantic Surf Clam"))
+        }
     }
 }
