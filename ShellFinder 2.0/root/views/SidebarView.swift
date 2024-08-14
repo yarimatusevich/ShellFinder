@@ -11,7 +11,6 @@ struct SidebarView: View {
         VStack(alignment: .leading) {
             
             Button(action: {
-                print("1")
                 isSettingsSheet.toggle()
             }, label: {
                 HStack {
@@ -23,7 +22,6 @@ struct SidebarView: View {
             .padding(.top, 100)
             
             Button(action: {
-                print("2")
                 isProfileSheet.toggle()
             }, label: {
                 HStack {
