@@ -6,10 +6,14 @@ import FirebaseCore
 struct ShellFinder_2_0App: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var network = ShellFinderNetwork() // object handling data from app API
+    @StateObject var authentication = ShellFinderAuth() // object handling user authentication
     
     var body: some Scene {
         WindowGroup {
             AuthView()
+                .environmentObject(network)
+                .environmentObject(authentication)
         }
     }
 }

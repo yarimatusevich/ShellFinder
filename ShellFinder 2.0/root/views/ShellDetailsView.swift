@@ -25,6 +25,7 @@ struct ShellDetailsView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 27, height: 27)
                         .padding(10)
+                    
                     VStack(alignment: .leading) {
                         Text("Scientific Name")
                             .font(.system(size: 17))
@@ -41,6 +42,7 @@ struct ShellDetailsView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 27, height: 27)
                         .padding(10)
+                    
                     VStack(alignment: .leading) {
                         Text("Diet")
                             .font(.system(size: 17))
@@ -57,6 +59,7 @@ struct ShellDetailsView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 27, height: 27)
                         .padding(10)
+                    
                     VStack(alignment: .leading) {
                         Text("Habitat")
                             .font(.system(size: 17))
@@ -74,6 +77,7 @@ struct ShellDetailsView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 27, height: 27)
                         .padding(10)
+                    
                     VStack(alignment: .leading) {
                         Text("Average Size")
                             .font(.system(size: 17))
@@ -90,6 +94,7 @@ struct ShellDetailsView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 27, height: 27)
                         .padding(10)
+                    
                     VStack(alignment: .leading) {
                         Text("Average Lifespan")
                             .font(.system(size: 17))

@@ -2,13 +2,12 @@ import Foundation
 import Firebase
 import FirebaseAuth
 
-class Authentication {
+class ShellFinderAuth: ObservableObject {
     
     private static let user = Auth.auth().currentUser
     
     // TODO: integrate into firestore DB
     // TODO: create methods for updating user display name and user photo
-    // TODO: create function for forgot password
     
     public static func registerUser(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in

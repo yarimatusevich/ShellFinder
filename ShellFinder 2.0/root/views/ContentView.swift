@@ -5,7 +5,6 @@ struct ContentView: View {
     @State var selectedTab = 1
     @State private var isShowingImagePicker = false
     
-    
     var body: some View {
         
         ZStack(alignment: .bottom) {

@@ -1,4 +1,5 @@
 import SwiftUI
+import Foundation
 import FirebaseAuth
 
 struct AuthView: View {
@@ -12,11 +13,11 @@ struct AuthView: View {
         if (userIsLoggedIn) {
             ContentView()
         } else {
-            content
+            authViewContent
         }
     }
     
-    var content: some View {
+    var authViewContent: some View {
         VStack {
             Text("Welcome to ShellFinder")
                 .font(.system(size: 40))
@@ -40,7 +41,7 @@ struct AuthView: View {
             
             // Sign up button
             Button {
-                Authentication.registerUser(email: email, password: password)
+                ShellFinderAuth.registerUser(email: email, password: password)
             } label: {
                 Text("Sign up")
             }
@@ -58,9 +59,9 @@ struct AuthView: View {
         }
         // On appear checks if user is already logged in
         .onAppear {
-            Auth.auth().addStateDidChangeListener { auth, user in
+            _ = Auth.auth().addStateDidChangeListener { auth, user in
                 if (user != nil) {
-                    userIsLoggedIn.toggle()
+                    userIsLoggedIn = true
                 }
             }
         }
@@ -93,7 +94,7 @@ struct LoginView: View {
             .padding(.vertical, 10)
             
             Button {
-                Authentication.logIn(email: email, password: password)
+                ShellFinderAuth.logIn(email: email, password: password)
             } label: {
                 Text("Log in")
             }
