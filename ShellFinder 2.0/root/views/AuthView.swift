@@ -6,22 +6,22 @@ struct AuthView: View {
     
     @State var email: String = ""
     @State var password: String = ""
+    @State var displayName: String = ""
     @State var displayingLogIn: Bool = false // whether or not showing log in view
-    @State var userIsLoggedIn: Bool = false
     
     var body: some View {
-        if (userIsLoggedIn) {
-            ContentView()
-        } else {
-            authViewContent
-        }
-    }
-    
-    var authViewContent: some View {
         VStack {
             Text("Welcome to ShellFinder")
                 .font(.system(size: 40))
                 .offset(y: -150)
+            
+            HStack {
+                TextField("Display name", text: $displayName)
+                    .bold()
+                    .font(.system(size: 20))
+                    .padding(.horizontal, 20)
+            }
+            .padding(.vertical, 10)
             
             HStack {
                 TextField("Email", text: $email)
@@ -41,7 +41,9 @@ struct AuthView: View {
             
             // Sign up button
             Button {
-                ShellFinderAuth.registerUser(email: email, password: password)
+                ShellFinderAuth.registerUser(
+                    email: email, password: password, displayName: displayName
+                )
             } label: {
                 Text("Sign up")
             }
@@ -56,14 +58,6 @@ struct AuthView: View {
             .sheet(isPresented: $displayingLogIn, content: {
                 LoginView()
             })
-        }
-        // On appear checks if user is already logged in
-        .onAppear {
-            _ = Auth.auth().addStateDidChangeListener { auth, user in
-                if (user != nil) {
-                    userIsLoggedIn = true
-                }
-            }
         }
     }
 }
