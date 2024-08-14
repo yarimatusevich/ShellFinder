@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2322BF5E2C66BDCB0084B3A3 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322BF5D2C66BDCB0084B3A3 /* SidebarView.swift */; };
+		2322BF602C6B0B5A0084B3A3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322BF5F2C6B0B5A0084B3A3 /* SettingsView.swift */; };
 		23406F1C2C17E70500763032 /* MyShellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23406F1B2C17E70500763032 /* MyShellsView.swift */; };
 		23406F1E2C17E7A900763032 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23406F1D2C17E7A900763032 /* DiscoverView.swift */; };
 		23406F202C17E80C00763032 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23406F1F2C17E80C00763032 /* ProfileView.swift */; };
@@ -66,6 +67,8 @@
 		231DDD6B2C1A16C700CEC33F /* SFPRODISPLAYULTRALIGHTITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYULTRALIGHTITALIC.OTF; sourceTree = "<group>"; };
 		231DDD6C2C1A16C700CEC33F /* SFPRODISPLAYLIGHTITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYLIGHTITALIC.OTF; sourceTree = "<group>"; };
 		2322BF5D2C66BDCB0084B3A3 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		2322BF5F2C6B0B5A0084B3A3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2322BF612C6D23AD0084B3A3 /* ShellFinder-2-0-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ShellFinder-2-0-Info.plist"; sourceTree = SOURCE_ROOT; };
 		23406F1B2C17E70500763032 /* MyShellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShellsView.swift; sourceTree = "<group>"; };
 		23406F1D2C17E7A900763032 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		23406F1F2C17E80C00763032 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -163,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				40F00D3B2C1BE3D7009F77C6 /* ShellDetailsView.swift */,
+				2322BF5F2C6B0B5A0084B3A3 /* SettingsView.swift */,
 				23406F1F2C17E80C00763032 /* ProfileView.swift */,
 				2322BF5D2C66BDCB0084B3A3 /* SidebarView.swift */,
 				23406F1B2C17E70500763032 /* MyShellsView.swift */,
@@ -220,6 +224,7 @@
 		409112D32C1537A0009AA164 /* ShellFinder 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				2322BF612C6D23AD0084B3A3 /* ShellFinder-2-0-Info.plist */,
 				407D460E2C5BFA3100BED816 /* root */,
 				409112D82C1537A1009AA164 /* Assets.xcassets */,
 				409112DA2C1537A1009AA164 /* Preview Content */,
@@ -398,6 +403,7 @@
 				2322BF5E2C66BDCB0084B3A3 /* SidebarView.swift in Sources */,
 				409089ED2C22455200CB978F /* CameraModel.swift in Sources */,
 				40F00D3C2C1BE3D7009F77C6 /* ShellDetailsView.swift in Sources */,
+				2322BF602C6B0B5A0084B3A3 /* SettingsView.swift in Sources */,
 				40F00D472C1FA25E009F77C6 /* HistoryEntry.swift in Sources */,
 				40F00D492C1FA30E009F77C6 /* MyShellsModel.swift in Sources */,
 				401A1A3C2C61AF9A00A28B0A /* AuthView.swift in Sources */,
@@ -579,7 +585,10 @@
 				DEVELOPMENT_TEAM = XKX94F4LDN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ShellFinder-2-0-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera permissions.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please allow location permissions.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow photo permissions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -611,7 +620,10 @@
 				DEVELOPMENT_TEAM = XKX94F4LDN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ShellFinder-2-0-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera permissions.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please allow location permissions.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow photo permissions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -49,7 +49,7 @@ struct SidebarView: View {
         .font(.system(size: 20))
         
         .sheet(isPresented: $isSettingsSheet, content: {
-            Text("Settings")
+            SettingsView(isSettingsSheet: $isSettingsSheet)
         })
         .sheet(isPresented: $isProfileSheet, content: {
             Text("About us")
