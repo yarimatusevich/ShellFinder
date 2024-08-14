@@ -4,10 +4,13 @@ struct DiscoverView: View {
     
     @State private var shells = [Shellfish]()
     
+    // TODO: Write function for scrolling up reloading view with loading wheel
+    
     var body: some View {
         
         NavigationStack {
             List(shells, id: \.id ) { shell in
+                
                 NavigationLink(destination: ShellDetailsView(currentShell: shell)) {
                         HStack {
                             Image(shell.getImage())
