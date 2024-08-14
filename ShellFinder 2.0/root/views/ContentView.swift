@@ -32,22 +32,7 @@ struct ContentView: View {
                             Text("Discover")
                         }
                         .tag(2)
-                    
-//                    MyShellsView()
-//                        .tabItem {
-//                            Image(systemName: "fossil.shell")
-//                            Text("My Shells")
-//                        }
-//                        .tag(0)
-                    
-//                    CommunityView()
-//                        .tabItem {
-//                            Image(systemName: "person.3.fill")
-//                            Text("Community")
-//                        }
-//                        .tag(1)
                 }
-                //.toolbarBackground(.white, for: .tabBar)
                 .toolbarBackground(.visible, for: .tabBar)
             }
         }

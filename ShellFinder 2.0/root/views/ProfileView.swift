@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    // TODO: pass envi obj
+    
     @State var isEditingProfile = false
     
     var body: some View {
@@ -18,9 +20,8 @@ struct ProfileView: View {
                 .fontWeight(.medium)
                 .offset(y: -200)
             
-            Text("shellfinder.user@gmail.com")
+            Text(ShellFinderAuth.currentUser?.email ?? "No email registered")
                 .offset(y: -200)
-            
             
             Button(action: {isEditingProfile.toggle()}, label: {
                 Text("Edit profile")
