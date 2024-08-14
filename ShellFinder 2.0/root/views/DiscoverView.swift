@@ -3,6 +3,7 @@ import SwiftUI
 struct DiscoverView: View {
     
     @State private var shells = [Shellfish]()
+    @EnvironmentObject var network: ShellFinderNetwork
     
     // TODO: Write function for scrolling up reloading view with loading wheel
     
@@ -37,29 +38,25 @@ struct DiscoverView: View {
             }
             .task {
                 do {
-                    shells = try await DiscoverModel.getShells()
+                    shells = try await getShells()
                 } catch {
                     print("Could not get shells from discover model")
                 }
             }
         }
     }
-}
-
-class DiscoverModel {
     
-    public static func getShells() async throws -> Array<Shellfish> {
-        let decodedShellData = await ShellAPI.fetchShells()
-        var keys = Array(decodedShellData.keys)
+    func getShells() async throws -> Array<Shellfish> {
+        var keys = network.getShellNames()
         var shellArr = [Shellfish]()
         
         // sorts keys alphabetically
         keys.sort()
         
         for key in keys {
-            if let current = decodedShellData[key] {
-                shellArr.append(current)
-            }
+            let current = network.getShell(shell: key)
+            print(current)
+            shellArr.append(current)
         }
         
         return shellArr
