@@ -12,10 +12,6 @@ struct Shellfish: Identifiable, Codable, CustomStringConvertible {
     private let averageLifeSpan: Double
     private let image: String
     
-    var description: String {
-        return "\(name)"
-    }
-    
     init(name: String, scientificName: String, diet: String, habitat: String, averageSize: Double, averageLifeSpan: Double, image: String) {
         self.name = name
         self.scientificName = scientificName
@@ -40,4 +36,9 @@ struct Shellfish: Identifiable, Codable, CustomStringConvertible {
     public func getAverageLifeSpan() -> Double { return averageLifeSpan }
     
     public func getImage() -> String { return image }
+    
+    // TODO: Remove
+    var description: String {
+        return "\(name)"
+    }
 }
