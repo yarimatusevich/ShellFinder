@@ -29,7 +29,7 @@ struct SettingsView: View {
         NavigationView {
             ScrollView {
                 Section(header: Text("Camera Settings")) {
-                    Toggle("Allow A2ccess to Camera", systemImage: "camera", isOn: $cameraAccess)
+                    Toggle("Allow Access to Camera", systemImage: "camera", isOn: $cameraAccess)
                     .onChange(of: cameraAccess) { oldValue, newValue in
                                             // Save the new value to UserDefaults
                                             UserDefaults.standard.set(newValue, forKey: "cameraAccess")
