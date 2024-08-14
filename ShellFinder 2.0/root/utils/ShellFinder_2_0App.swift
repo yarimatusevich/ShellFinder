@@ -11,10 +11,14 @@ struct ShellFinder_2_0App: App {
     
     var body: some Scene {
         WindowGroup {
-            AuthView()
-                .environmentObject(network)
-                .environmentObject(authentication)
+            if (authentication.userIsLoggedIn) {
+                ContentView()
+            } else {
+                AuthView()
+            }
         }
+        .environmentObject(network)
+        .environmentObject(authentication)
     }
 }
 
