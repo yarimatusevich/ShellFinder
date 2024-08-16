@@ -9,7 +9,7 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     @Published var alert = false
     @Published var output = AVCapturePhotoOutput()
     @Published var preview : AVCaptureVideoPreviewLayer!
-    //@Published var image : UIImage?
+    @Published var imageData: Data?
     
     func Check() {
         
@@ -49,10 +49,7 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
                 self.session.addOutput(self.output)
             }
             self.session.commitConfiguration()
-            
-            //output = AVCapturePhotoOutput()
-            //output.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])])
-            //session.addOutput(output)
+
         }
         
         catch{
@@ -64,56 +61,23 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
         }
     }
     
+    func startSession() {
+        session.startRunning()
+    }
+    
+    func stopSession() {
+        session.stopRunning()
+    }
+    
     func capturePhoto() {
         let settings = AVCapturePhotoSettings()
         output.capturePhoto(with: settings, delegate: self)
     }
     
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        if let imageData = photo.fileDataRepresentation() {
-            print(imageData)
-            
-            //let image = UIImage(data: imageData)
-            //let image = UIImage(data: imageData)
-            
-            // Load Image and Convert to Base64
-            //let imageData = image?.jpegData(compressionQuality: 1)
-            let fileContent = imageData.base64EncodedString()
-            let postData = fileContent.data(using: .utf8)
-
-            // Initialize Inference Server Request with API_KEY, Model, and Model Version
-            var request = URLRequest(url: URL(string: "https://detect.roboflow.com/shellfinder-shells-2ju95/9?api_key=9c8rWlq4HvktMOyksrUb")!,timeoutInterval: Double.infinity)
-            request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-            request.httpMethod = "POST"
-            request.httpBody = postData
-
-            // Execute Post Request
-            URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
-                
-                // Parse Response to String
-                guard let data = data else {
-                    print(String(describing: error))
-                    return
-                }
-                
-                // Convert Response String to Dictionary
-                do {
-                    let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                } catch {
-                    print(error.localizedDescription)
-                }
-                
-                // Print String Response
-                print(String(data: data, encoding: .utf8)!)
-                print("did it!")
-            })
-            .resume()
-            
-        }
-    }
-    
-    func AImodel() {
+    public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         
+        guard let picData = photo.fileDataRepresentation() else { return }
+        self.imageData = picData
     }
 }
 
@@ -133,8 +97,6 @@ struct CameraPreview: UIViewRepresentable {
                     camera.preview?.videoGravity = .resizeAspectFill
                     view.layer.addSublayer(camera.preview!)
                 }
-        
-        
         return view
     }
     

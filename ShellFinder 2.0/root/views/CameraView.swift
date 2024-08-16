@@ -4,9 +4,12 @@ import SwiftUI
 struct CameraView: View {
     
     @StateObject var camera = CameraModel()
+    
     @Binding var isSidebarVisible: Bool
     @State private var dragOffset: CGFloat = 0.0
     private let sidebarWidth: CGFloat = 300.0
+    
+    @StateObject private var aiModel = AIModel()
     @State private var isAIResult = false
     @EnvironmentObject var network: ShellFinderNetwork
     
@@ -25,11 +28,17 @@ struct CameraView: View {
                 .frame(width: 290)
                 .offset(y: -75)
             
-            
             Button(action: {
-                print("button pressed!") 
-                camera.capturePhoto()
-                isAIResult.toggle()
+                Task {
+                    camera.capturePhoto()
+                    await waitForImageData()
+                    camera.stopSession()
+                    isAIResult.toggle()
+                    if let imageData = camera.imageData {
+                        aiModel.processImage(imageData: imageData)
+                    }
+                }
+                
             }, label: {
                 
                 ZStack{
@@ -63,50 +72,53 @@ struct CameraView: View {
             SidebarView()
                 .frame(width: sidebarWidth)
                 .offset(x: -50)
-            
                 .offset(x: isSidebarVisible ? 0 : -sidebarWidth + dragOffset)
-                //.animation(.default, value: isSidebarVisible)
-            
-                //.offset(x: isSidebarVisible ? dragOffset : -sidebarWidth + dragOffset)
-                //.animation(.none, value: dragOffset)  // No animation during drag
-                //.animation(.default, value: isSidebarVisible)
-            
         }
         .gesture(
             DragGesture()
-//                .onChanged { value in
-//                                    // Calculate dragOffset to slide the sidebar in and out
-//                                    if isSidebarVisible {
-//                                        // If the sidebar is open, allow dragging left to close
-//                                        dragOffset = value.translation.width < 0 ? value.translation.width : 0
-//                                    } else {
-//                                        // If the sidebar is closed, allow dragging right to open
-//                                        dragOffset = max(0, min(value.translation.width, sidebarWidth))
-//                                    }
-//                                }
-                            .onEnded { value in
-                                // Decide to open or close the sidebar based on the drag distance
-                                let eval = value.translation.width > self.sidebarWidth / 3
-                                withAnimation {
-                                    isSidebarVisible = eval
-//                                    if isSidebarVisible {
-//                                        // If it was open, close if dragged left more than half
-//                                        if value.translation.width < -sidebarWidth / 4 {
-//                                            isSidebarVisible = false
-//                                        }
-//                                    } else {
-//                                        // If it was closed, open if dragged right more than half
-//                                        if value.translation.width > sidebarWidth / 4 {
-//                                            isSidebarVisible = true
-//                                        }
-//                                    }
-                                }
-                                // Reset dragOffset after ending drag
-                                dragOffset = 0
-                            }
+            .onEnded { value in
+                let eval = value.translation.width > self.sidebarWidth / 3 //determines drag distance neeeded for sidebar to appear
+                withAnimation {
+                    isSidebarVisible = eval
+                }
+                // Reset dragOffset after ending drag
+                dragOffset = 0
+            }
         )
-        .sheet(isPresented: $isAIResult) {
-            ShellDetailsView(currentShell: network.getShell(shell: "Atlantic Surf Clam"))
+        .sheet(isPresented: $isAIResult, onDismiss: {
+            resetPrediction()
+            camera.startSession()
+        }) {
+            if aiModel.predictionName == nil {
+                VStack {
+                    ProgressView() // This is a spinner
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .scaleEffect(2)
+                        .padding()
+                    Text("Processing...")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+            }
+            else if aiModel.predictionName == "empty" {
+                Text("No predictions found.")
+            } else {
+                if let predictionName = aiModel.predictionName {
+                    ShellDetailsView(currentShell: network.getShell(shell: predictionName))
+                }
+            }
         }
     }
+    
+    private func waitForImageData() async {
+            while camera.imageData == nil {
+                await Task.yield()
+            }
+        }
+    
+    func resetPrediction() {
+        aiModel.predictionName = nil
+        camera.imageData = nil
+    }
 }
+
