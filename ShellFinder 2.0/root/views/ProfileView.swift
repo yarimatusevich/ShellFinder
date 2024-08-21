@@ -3,53 +3,109 @@ import SwiftUI
 struct ProfileView: View {
     
     @EnvironmentObject var authentication: ShellFinderAuth
+    @EnvironmentObject var network: ShellFinderNetwork
     @State private var isDisplayingEditProfile = false
     @State private var isDisplayingMyShells = false
+    @State var userIDCount: Int = 0
     
     var body: some View {
         
-        VStack {
-            Image(systemName: "person.circle.fill")
-                .resizable()
-                .frame(width: 200, height: 200)
-                .offset(y: -200)
-                .padding(.vertical, 10)
+        NavigationStack {
+            Group {
+                VStack {
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .frame(width: 150, height: 150)
+                        .padding(.vertical, 10)
+                        .foregroundStyle(Color(.blue))
+                    
+                    Text(authentication.currentUserDisplayName)
+                        .font(.title)
+                        .fontWeight(.medium)
+                    
+                    Text(authentication.currentUserEmail)
+                        .font(.subheadline)
+                    
+                    Button(
+                        action: {
+                            isDisplayingMyShells.toggle()
+                        }, label: {
+                            HStack {
+                                Image(systemName: "fossil.shell.fill")
+                                
+                                Text("My Shells")
+                                    .font(.system(size: 18))
+                                    .foregroundStyle(Color(.white))
+                                    .padding(.horizontal, 10)
+                            }
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .padding()
+                        }
+                    )
+                    .buttonStyle(BorderedProminentButtonStyle())
+                    .clipShape(RoundedRectangle(cornerRadius: 50))
+                    .padding(.horizontal, 40)
+                    .padding(.vertical, 20)
+                }
+            }
             
-            Text(authentication.currentUserDisplayName)
-                .font(.largeTitle)
-                .fontWeight(.medium)
-                .offset(y: -200)
+            Spacer()
             
-            Text(authentication.currentUserEmail)
-                .offset(y: -200)
-            
-            Button(action: {isDisplayingEditProfile.toggle()}, label: {
-                Text("Edit profile")
-            })
-            
-            Button(action: {
-                authentication.logOut()
-            }, label: {
-                Text("Log out")
-            })
-            
-            Button(action: {
-                isDisplayingMyShells = true
-            }, label: {
-                Text("My Shells")
-            })
-            
-            HStack {
-                Image(systemName: "magnifyingglass.circle.fill")
-                    .resizable()
-                    .frame(width: 30, height: 30)
+            List {
+                Section(header: Text("My Statistics")) {
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .foregroundStyle(Color(.blue))
+                            .padding(.horizontal, 20)
+                        
+                        Text("Shell Identifications: \(userIDCount)")
+                            .font(.system(size: 18))
+                            .foregroundStyle(Color(.blue))
+                    }
+                }
                 
-                Text("Number of IDs")
+                Section(header: Text("Edit Profile")) {
+                    Button(
+                        action: {
+                            print("Change password")
+                        },
+                        label: {
+                        Text("Change password")
+                    })
+                    
+                    Button(
+                        action: {
+                            print("Change email")
+                        },
+                        label: {
+                        Text("Change email")
+                    })
+                    
+                    Button(
+                        action: {
+                            print("Change display name")
+                        },
+                        label: {
+                        Text("Change display name")
+                    })
+                }
+                
+                Button(action: {
+                    authentication.logOut()
+                }, label: {
+                    Text("Log out")
+                        .foregroundStyle(Color(.red))
+                })
             }
         }
-        .onAppear(perform: {
+        .onAppear {
             authentication.checkUserStatus()
-        })
+            Task {
+                userIDCount = await network.getUserIdentificationCount(userId: authentication.getCurrentUserID())
+            }
+        }
         .navigationTitle("Profile")
         .sheet(isPresented: $isDisplayingEditProfile, content: {
             ChangeProfileView()
