@@ -8,7 +8,6 @@ class ShellFinderNetwork: ObservableObject {
     // TODO: Implement proper error handling
     // TODO: Implement security measures
     
-    
     private let db = Firestore.firestore() // cloud storage database
     private var shellDB = [String: Shellfish]() // all shells in database
     
@@ -55,11 +54,15 @@ class ShellFinderNetwork: ObservableObject {
     public func setUser(user: User) {
         let collectionRef = db.collection("users")
         
-        do {
-            try collectionRef.addDocument(from: user.self)
+        if let uid = user.id {
             
-        } catch {
-            print("Failed to set user: \(error.localizedDescription)")
+            let documentRef = collectionRef.document(uid)
+            
+            do {
+                try documentRef.setData(from: user.self)
+            } catch {
+                print("Failed to set user: \(error.localizedDescription)")
+            }
         }
     }
     
@@ -77,7 +80,47 @@ class ShellFinderNetwork: ObservableObject {
         }
     }
     
-    public func getUserHistory(currentUser: User) async {
+    public func getUserHistory(userId: String) async -> Array<HistoryEntry> {
+        var output = Array<HistoryEntry>()
+        let currentUser = await getUser(userId: userId)
+        guard let historyRef = currentUser?.getUserHistoryRef() else { return output }
         
+        do {
+            let querySnapshot = try await db.collection(historyRef).getDocuments()
+            
+            for document in querySnapshot.documents {
+                let historyEntry = try document.data(as: HistoryEntry.self)
+                output.append(historyEntry)
+            }
+            
+        } catch {
+            print("Failed to retrieve user history: \(error.localizedDescription)")
+        }
+        
+        return output
+    }
+    
+    public func addEntryToUserHistory(userId: String, entry: HistoryEntry) async {
+        let currentUser = await getUser(userId: userId)
+        
+        guard let historyRef = currentUser?.getUserHistoryRef() else { return }
+        
+        do {
+            try db.collection(historyRef).addDocument(from: entry.self)
+            print("Incremented number of IDs")
+        } catch {
+            print("Failed to add entry to user history: \(error.localizedDescription)")
+        }
+    }
+    
+    public func incrementUserIdentificationCount(userId: String) async {
+        let currentUserDocRef = db.collection("users").document(userId)
+        
+        do {
+            try await currentUserDocRef.updateData(["numberOfIdentifications": FieldValue.increment(1.0)])
+            print("Incremented number of IDs")
+        } catch {
+            print("Failed to increment current user's number of Identifications: \(error.localizedDescription)")
+        }
     }
 }
