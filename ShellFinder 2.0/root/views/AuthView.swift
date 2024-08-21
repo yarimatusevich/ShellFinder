@@ -4,6 +4,8 @@ import FirebaseAuth
 
 struct AuthView: View {
     
+    @EnvironmentObject var authentication: ShellFinderAuth
+    
     @State var email: String = ""
     @State var password: String = ""
     @State var displayName: String = ""
@@ -41,7 +43,7 @@ struct AuthView: View {
             
             // Sign up button
             Button {
-                ShellFinderAuth.registerUser(
+                authentication.registerUser(
                     email: email, password: password, displayName: displayName
                 )
             } label: {
@@ -63,6 +65,8 @@ struct AuthView: View {
 }
 
 struct LoginView: View {
+    
+    @EnvironmentObject var authentication: ShellFinderAuth
     
     @State var email : String = ""
     @State var password : String = ""
@@ -88,7 +92,7 @@ struct LoginView: View {
             .padding(.vertical, 10)
             
             Button {
-                ShellFinderAuth.logIn(email: email, password: password)
+                authentication.logIn(email: email, password: password)
             } label: {
                 Text("Log in")
             }
