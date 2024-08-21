@@ -83,10 +83,11 @@ class ShellFinderNetwork: ObservableObject {
     public func getUserHistory(userId: String) async -> Array<HistoryEntry> {
         var output = Array<HistoryEntry>()
         let currentUser = await getUser(userId: userId)
+        
         guard let historyRef = currentUser?.getUserHistoryRef() else { return output }
         
         do {
-            let querySnapshot = try await db.collection(historyRef).getDocuments()
+            let querySnapshot = try await db.collection(historyRef).order(by: "date", descending: true).getDocuments()
             
             for document in querySnapshot.documents {
                 let historyEntry = try document.data(as: HistoryEntry.self)
@@ -111,6 +112,25 @@ class ShellFinderNetwork: ObservableObject {
         } catch {
             print("Failed to add entry to user history: \(error.localizedDescription)")
         }
+    }
+    
+    public func getUserIdentificationCount(userId: String) async -> Int {
+        let collectionRef = db.collection("users")
+        let userDocRef = collectionRef.document(userId)
+        var output: Int = 0
+        
+        do {
+            let query = try await userDocRef.getDocument()
+            
+            if let data = query.data(), let count = data["numberOfIdentifications"] as? Int {
+                output = count
+            }
+            
+        } catch {
+            print("Error getting user id count: \(error.localizedDescription)")
+        }
+        
+        return output
     }
     
     public func incrementUserIdentificationCount(userId: String) async {
