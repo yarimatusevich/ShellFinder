@@ -9,9 +9,10 @@ struct CameraView: View {
     @State private var dragOffset: CGFloat = 0.0
     private let sidebarWidth: CGFloat = 300.0
     
-    @StateObject private var aiModel = AIModel()
+    @StateObject private var predictionModel = AIModel()
     @State private var isAIResult = false
     @EnvironmentObject var network: ShellFinderNetwork
+    @EnvironmentObject var authentication: ShellFinderAuth
     
     var body: some View {
         
@@ -34,8 +35,9 @@ struct CameraView: View {
                     await waitForImageData()
                     camera.stopSession()
                     isAIResult.toggle()
+                    
                     if let imageData = camera.imageData {
-                        aiModel.processImage(imageData: imageData)
+                        predictionModel.processImage(imageData: imageData)
                     }
                 }
                 
@@ -89,22 +91,41 @@ struct CameraView: View {
             resetPrediction()
             camera.startSession()
         }) {
-            if aiModel.predictionName == nil {
-                VStack {
-                    ProgressView() // This is a spinner
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .scaleEffect(2)
-                        .padding()
-                    Text("Processing...")
-                        .font(.headline)
-                        .foregroundColor(.white)
+            VStack {
+                if predictionModel.currentPredictionName == nil {
+                    VStack {
+                        ProgressView() // This is a spinner
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .scaleEffect(2)
+                            .padding()
+                        Text("Processing...")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                    }
                 }
-            }
-            else if aiModel.predictionName == "empty" {
-                Text("No predictions found.")
-            } else {
-                if let predictionName = aiModel.predictionName {
-                    ShellDetailsView(currentShell: network.getShell(shell: predictionName))
+                else if predictionModel.currentPredictionName == "empty" {
+                    Text("No predictions found.")
+                    
+                } else {
+                    if let currentPrediction = predictionModel.currentPredictionName {
+                        ShellDetailsView(
+                            currentShell: network.getShell(shell: currentPrediction)
+                        )
+                        .onAppear {
+                            if let currentPrediction = predictionModel.currentPredictionName {
+                                print("REACHED")
+                                let shellFromPrediction = network.getShell(shell: currentPrediction)
+                                let date = Date()
+                                let entry = HistoryEntry(date: date, shell: shellFromPrediction)
+                                
+                                Task {
+                                    let uid = authentication.getCurrentUserID()
+                                    await network.addEntryToUserHistory(userId: uid, entry: entry)
+                                    await network.incrementUserIdentificationCount(userId: uid)
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -116,8 +137,8 @@ struct CameraView: View {
             }
         }
     
-    func resetPrediction() {
-        aiModel.predictionName = nil
+    private func resetPrediction() {
+        predictionModel.currentPredictionName = nil
         camera.imageData = nil
     }
 }
