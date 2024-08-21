@@ -3,6 +3,7 @@ import Firebase
 import FirebaseFirestore
 
 struct User: Codable {
+    
     @DocumentID var id: String?
     private let numberOfIdentifications: Int
     private let userHistoryRef: String
@@ -14,6 +15,6 @@ struct User: Codable {
     }
     
     // Getters
-    
     public func getNumberOfIdentifications() -> Int { return numberOfIdentifications }
+    public func getUserHistoryRef() -> String { return userHistoryRef }
 }
