@@ -87,10 +87,10 @@ struct SettingsView: View {
     }
     
     private func openAppSettings() {
-            if let settingsUrl = URL(string: UIApplication.openSettingsURLString),
-               UIApplication.shared.canOpenURL(settingsUrl) {
-                UIApplication.shared.open(settingsUrl, options: [:], completionHandler: nil)
-            }
+        if let settingsUrl = URL(string: UIApplication.openSettingsURLString),
+           UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, options: [:], completionHandler: nil)
         }
+    }
 }
 

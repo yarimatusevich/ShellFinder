@@ -35,8 +35,6 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
         }
     }
     
-    // TODO: Create seperate class for functions related to AI, call methods from that class in this class for clarity
-    
     func setUp(){
         do {
             self.session.beginConfiguration()
@@ -61,6 +59,7 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
         }
     }
     
+    // TODO: Make this run on a background thread to avoid hanging
     func startSession() {
         session.startRunning()
     }
@@ -75,7 +74,6 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     }
     
     public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        
         guard let picData = photo.fileDataRepresentation() else { return }
         self.imageData = picData
     }
@@ -97,6 +95,7 @@ struct CameraPreview: UIViewRepresentable {
                     camera.preview?.videoGravity = .resizeAspectFill
                     view.layer.addSublayer(camera.preview!)
                 }
+        
         return view
     }
     
