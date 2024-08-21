@@ -16,5 +16,8 @@ class HistoryEntry: Identifiable, Codable {
     // Getters
     public func getShell() -> Shellfish { return shell }
     
-    public func getDate() -> Date { return date }
+    public func getDate() -> String {
+        // Returns date formatted as a string
+        return date.formatted()
+    }
 }
