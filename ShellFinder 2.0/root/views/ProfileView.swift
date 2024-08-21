@@ -2,9 +2,9 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    // TODO: pass envi obj
-    
-    @State var isEditingProfile = false
+    @EnvironmentObject var authentication: ShellFinderAuth
+    @State private var isDisplayingEditProfile = false
+    @State private var isDisplayingMyShells = false
     
     var body: some View {
         
@@ -15,22 +15,28 @@ struct ProfileView: View {
                 .offset(y: -200)
                 .padding(.vertical, 10)
             
-            Text("Shell F.")
+            Text(authentication.currentUserDisplayName)
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .offset(y: -200)
             
-            Text(ShellFinderAuth.currentUser?.email ?? "No email registered")
+            Text(authentication.currentUserEmail)
                 .offset(y: -200)
             
-            Button(action: {isEditingProfile.toggle()}, label: {
+            Button(action: {isDisplayingEditProfile.toggle()}, label: {
                 Text("Edit profile")
             })
             
             Button(action: {
-                ShellFinderAuth.logOut()
+                authentication.logOut()
             }, label: {
                 Text("Log out")
+            })
+            
+            Button(action: {
+                isDisplayingMyShells = true
+            }, label: {
+                Text("My Shells")
             })
             
             HStack {
@@ -41,10 +47,67 @@ struct ProfileView: View {
                 Text("Number of IDs")
             }
         }
+        .onAppear(perform: {
+            authentication.checkUserStatus()
+        })
         .navigationTitle("Profile")
-        .sheet(isPresented: $isEditingProfile, content: {
+        .sheet(isPresented: $isDisplayingEditProfile, content: {
             ChangeProfileView()
         })
+        .sheet(isPresented: $isDisplayingMyShells, content: {
+            MyShellsView()
+        })
+    }
+}
+
+struct MyShellsView: View {
+    
+    @EnvironmentObject var network: ShellFinderNetwork
+    @EnvironmentObject var authentication: ShellFinderAuth
+    @State private var entries = [HistoryEntry]()
+    
+    var body: some View {
+        
+        NavigationView {
+            
+            List(entries) { entry in
+                let currentShell = entry.getShell()
+                
+                HStack {
+                    Image(currentShell.getImage())
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 145, height: 130, alignment: .center)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(.trailing, 5)
+                    
+                    VStack(alignment: .leading) {
+                        Text(currentShell.getName())
+                            .font(.system(size: 16))
+                            .lineSpacing(5)
+                            .padding(.bottom, 3)
+                        
+                        Text(currentShell.getScientificName())
+                            .font(.system(size: 15))
+                            .italic()
+                            .lineSpacing(5)
+                        
+                        Text(entry.getDate())
+                            .foregroundColor(.gray)
+                            .font(.system(size: 15))
+                            .offset(y: 30)
+                    }
+                    
+                }
+            }
+        }
+        .onAppear() {
+            Task {
+                let uid = authentication.getCurrentUserID()
+                entries = await network.getUserHistory(userId: uid)
+            }
+        }
+        .navigationTitle("My Shells")
     }
 }
 
@@ -57,4 +120,6 @@ struct ChangeProfileView: View {
 
 #Preview {
     ProfileView()
+        .environmentObject(ShellFinderAuth())
+        .environmentObject(ShellFinderNetwork())
 }
