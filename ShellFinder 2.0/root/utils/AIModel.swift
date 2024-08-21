@@ -5,15 +5,17 @@ import AVFoundation
 
 class AIModel: ObservableObject {
     
-    @Published var predictionName: String?
-    @Published var confidence: Double?
+    @Published var currentPredictionName: String?
+    @Published var currentPredictionConfidence: Double?
     
-    func processImage(imageData: Data) {
+    public func processImage(imageData: Data) {
         let fileContent = imageData.base64EncodedString()
         let postData = fileContent.data(using: .utf8)
         
         // Initialize Inference Server Request with API_KEY, Model, and Model Version
-        var request = URLRequest(url: URL(string: "https://detect.roboflow.com/shellfinder-shells-2ju95/9?api_key=9c8rWlq4HvktMOyksrUb")!, timeoutInterval: Double.infinity)
+        var request = URLRequest(
+            url: URL(string: "https://detect.roboflow.com/shellfinder-shells-2ju95/9?api_key=9c8rWlq4HvktMOyksrUb")!, timeoutInterval: Double.infinity)
+        
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         request.httpBody = postData
@@ -31,39 +33,41 @@ class AIModel: ObservableObject {
                     
                     // Extract predictions array
                     if let predictions = jsonDict["predictions"] as? [[String: Any]] {
+                        
                         if predictions.isEmpty {
                             print("No predictions found.")
                             DispatchQueue.main.async {
-                                self.predictionName = "empty"
+                                self.currentPredictionName = "empty"
                             }
+                            
                         } else {
+                            
                             for prediction in predictions {
                                 if let className = prediction["class"] as? String {
                                     print("Class Name: \(className)")
                                     DispatchQueue.main.async {
-                                        self.predictionName = className
+                                        self.currentPredictionName = className
                                     }
                                 }
+                                
                                 if let confidence = prediction["confidence"] as? Double {
                                     print("Confidence: \(confidence)")
                                     DispatchQueue.main.async {
-                                        self.confidence = confidence
+                                        self.currentPredictionConfidence = confidence
                                     }
                                 }
                             }
                         }
                     }
+                    
                 } else {
                     print("Could not parse JSON into a dictionary")
                 }
+                
             } catch {
                 print("Error parsing JSON: \(error.localizedDescription)")
             }
         }
         task.resume()  // Start the network request
-    }
-    
-    func getPredictionName() -> String? {
-        return predictionName
     }
 }
