@@ -33,7 +33,6 @@
 		409112F22C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */; };
 		40F00D3C2C1BE3D7009F77C6 /* ShellDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D3B2C1BE3D7009F77C6 /* ShellDetailsView.swift */; };
 		40F00D472C1FA25E009F77C6 /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D462C1FA25E009F77C6 /* HistoryEntry.swift */; };
-		40F00D492C1FA30E009F77C6 /* MyShellsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +88,6 @@
 		409112F12C1537A2009AA164 /* ShellFinder_2_0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellFinder_2_0UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		40F00D3B2C1BE3D7009F77C6 /* ShellDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellDetailsView.swift; sourceTree = "<group>"; };
 		40F00D462C1FA25E009F77C6 /* HistoryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntry.swift; sourceTree = "<group>"; };
-		40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShellsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +136,6 @@
 		401A1A362C615C2400A28B0A /* models */ = {
 			isa = PBXGroup;
 			children = (
-				40F00D482C1FA30E009F77C6 /* MyShellsModel.swift */,
 				409089EC2C22455200CB978F /* CameraModel.swift */,
 			);
 			path = models;
@@ -395,7 +392,6 @@
 				40F00D3C2C1BE3D7009F77C6 /* ShellDetailsView.swift in Sources */,
 				2322BF602C6B0B5A0084B3A3 /* SettingsView.swift in Sources */,
 				40F00D472C1FA25E009F77C6 /* HistoryEntry.swift in Sources */,
-				40F00D492C1FA30E009F77C6 /* MyShellsModel.swift in Sources */,
 				401A1A3C2C61AF9A00A28B0A /* AuthView.swift in Sources */,
 				409089EA2C22415300CB978F /* User.swift in Sources */,
 				407D46112C5BFAA900BED816 /* ShellFinderAuth.swift in Sources */,
