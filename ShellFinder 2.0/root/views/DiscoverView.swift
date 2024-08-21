@@ -11,7 +11,6 @@ struct DiscoverView: View {
         
         NavigationStack {
             List(shells, id: \.id ) { shell in
-                
                 NavigationLink(destination: ShellDetailsView(currentShell: shell)) {
                         HStack {
                             Image(shell.getImage())
@@ -22,11 +21,12 @@ struct DiscoverView: View {
                                 .padding(.trailing, 5)
                             
                             VStack(alignment: .leading) {
-                                
                                 Text(shell.getName())
                                     .font(.system(size: 16))
                                     .lineSpacing(5)
                                     .padding(.bottom, 5)
+                                    .fontWeight(.medium)
+                                
                                 Text(shell.getScientificName())
                                     .font(.system(size: 15))
                                     .italic()
