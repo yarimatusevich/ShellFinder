@@ -4,13 +4,11 @@ import FirebaseAuth
 
 class ShellFinderAuth: ObservableObject {
     
-    public static let currentUser = Auth.auth().currentUser
     @Published var userIsLoggedIn: Bool = false
+    @Published var currentUserEmail: String = ""
+    @Published var currentUserDisplayName: String = ""
     
-    // TODO: integrate into firestore DB
     // TODO: create methods for updating user display name and user photo
-    // TODO: Make environmental object and upon init check current log in status
-    
     
     init() {
         checkUserStatus()
@@ -20,13 +18,15 @@ class ShellFinderAuth: ObservableObject {
         _ = Auth.auth().addStateDidChangeListener { auth, user in
             if (user != nil) {
                 self.userIsLoggedIn = true
+                self.currentUserEmail = Auth.auth().currentUser?.email ?? "No email registered"
+                self.currentUserDisplayName = Auth.auth().currentUser?.displayName ?? "Guest"
             }
         }
     }
     
-    // Registers new user into FireAuth and creates a new user object which is stored in user DB
-    public static func registerUser(email: String, password: String, displayName: String) {
+    public func registerUser(email: String, password: String, displayName: String) {
         
+        // Registers new user into FireAuth and creates a new user object which is stored in user DB
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             
             if let error = error {
@@ -38,9 +38,10 @@ class ShellFinderAuth: ObservableObject {
                 let numberOfIds = 0
                 let historyRef = "users/\(userId)/history"
                 
-                let newUser = User(numberOfIdentifications: numberOfIds, userHistoryRef: historyRef)
+                let newUser = User(id: userId, numberOfIdentifications: numberOfIds, userHistoryRef: historyRef)
                 
                 ShellFinderNetwork().setUser(user: newUser)
+                self.setDisplayName(displayName: displayName)
                 
             } else {
                 print ("Error passing new user information to network")
@@ -48,7 +49,7 @@ class ShellFinderAuth: ObservableObject {
         }
     }
     
-    public static func logIn(email: String, password: String) {
+    public func logIn(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { AuthDataResult, error in
             if (error != nil) {
                 print("Error logging in user: \(error!.localizedDescription)")
@@ -58,7 +59,7 @@ class ShellFinderAuth: ObservableObject {
         }
     }
     
-    public static func logOut() {
+    public func logOut() {
         do {
             try Auth.auth().signOut()
         } catch {
@@ -66,19 +67,38 @@ class ShellFinderAuth: ObservableObject {
         }
     }
     
-    public static func changeEmail(newEmail: String) {
-        currentUser?.sendEmailVerification(beforeUpdatingEmail: newEmail)
+    public func getCurrentUserID() -> String {
+        if let currentUID = Auth.auth().currentUser?.uid {
+            return currentUID
+        } else {
+            return ""
+        }
     }
     
-    public static func changePassword(newPassword: String) {
-        currentUser?.updatePassword(to: newPassword)
+    public func setDisplayName(displayName: String) {
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        
+        changeRequest?.displayName = displayName
+        
+        changeRequest?.commitChanges { error in
+            if (error != nil) {
+                print("Error commiting changes to user display name: \(error!.localizedDescription)")
+            }
+        }
+        
+        // Reloads profile to make sure changes are up to date
+        Auth.auth().currentUser?.reload()
     }
     
-    public static func changeDisplayName(newDisplayName: String) {
-        // TODO
+    public func setEmail(email: String) {
+        Auth.auth().currentUser?.sendEmailVerification(beforeUpdatingEmail: email)
     }
     
-    public static func deleteUser() {
-        currentUser?.delete()
+    public func setPassword(password: String) {
+        Auth.auth().currentUser?.updatePassword(to: password)
+    }
+    
+    public func deleteUser() {
+        Auth.auth().currentUser?.delete()
     }
 }
