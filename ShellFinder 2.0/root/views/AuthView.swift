@@ -13,11 +13,20 @@ struct AuthView: View {
     
     var body: some View {
         VStack {
-            Text("Welcome to ShellFinder")
-                .font(.system(size: 40))
-                .offset(y: -150)
             
-            Image("AppIcon")
+            Image("shellfinder_icon")
+                .resizable()
+                .frame(width: 250, height: 250, alignment: .center)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .padding(.bottom, 0)
+//                .offset(y: -100)
+
+            
+            Text("ShellFinder")
+                .font(.system(size: 40))
+                .foregroundColor(.gray)
+                .padding(.bottom, 30)
+                .offset(y:-20)
             
             HStack {
                 TextField("Display name", text: $displayName)
@@ -50,7 +59,12 @@ struct AuthView: View {
                 )
             } label: {
                 Text("Sign up")
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(15)
             }
+            .padding(.vertical, 10)
 
             // Log in button
             Button {
