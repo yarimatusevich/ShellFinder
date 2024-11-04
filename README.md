@@ -1,8 +1,14 @@
 # ShellFinder
 
-![Capture Demo](Media/capture.mov)
+![shellfinder-icon](https://github.com/user-attachments/assets/f134f414-d9eb-498a-ac6f-820cfb64d826)
 
 Shellfinder uses artificial intelligence to identify shellfish from photos of shells taken within the application. To identify a shell you must center the shell on the camera screen with the help of the displayed bounding box. When the shell is properly centered you can take a photo which is then processed through our AI model. The AI's best prediction is then returned and displayed on the screen. The app also features user authentication, cloud storage, and a user history (which displays previous identifications made by the user).
+
+![Capture Demo](Media/capture.mp4)
+
+![Discover Page](Media/discover.mp4)
+
+![Profiel Page](Media/profile.mp4)
 
 ## How was the Artificial Intelligence trained?
 
