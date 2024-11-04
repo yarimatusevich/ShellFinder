@@ -17,6 +17,8 @@ struct AuthView: View {
                 .font(.system(size: 40))
                 .offset(y: -150)
             
+            Image("AppIcon")
+            
             HStack {
                 TextField("Display name", text: $displayName)
                     .bold()
